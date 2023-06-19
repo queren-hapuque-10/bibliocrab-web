@@ -52,7 +52,7 @@ const BookDetails = () => {
       <div className='container'>
         <button type='button' className='flex flex-c back-btn' onClick={() => navigate("/book")}>
           <FaArrowLeft size = {22} />
-          <span className='fs-18 fw-6'>Go Back</span>
+          <span className='fs-18 fw-6'>Voltar</span>
         </button>
 
         <div className='book-details-content grid'>

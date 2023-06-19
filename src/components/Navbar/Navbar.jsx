@@ -14,23 +14,29 @@ const Navbar = () => {
         <div className='brand-and-toggler flex flex-sb'>
           <Link to = "/" className='navbar-brand flex'>
             <img src = {logoImg} alt = "site logo" />
-            <span className='text-uppercase fw-7 fs-24 ls-1'>bibliocrab</span>
           </Link>
           <button type = "button" className='navbar-toggler-btn' onClick={handleNavbar}>
             <HiOutlineMenuAlt3 size = {35} style = {{
-              color: `${toggleMenu ? "#fff" : "#010101"}`
+              color: `${toggleMenu ? "#fff" : "#241E58"}`
             }} />
           </button>
         </div>
 
         <div className={toggleMenu ? "navbar-collapse show-navbar-collapse" : "navbar-collapse"}>
           <ul className = "navbar-nav">
-            <li className='nav-item'>
-              <Link to = "book" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Acervo</Link>
-            </li>
+
             <li className='nav-item'>
               <Link to = "about" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Sobre</Link>
             </li>
+
+            <li className='nav-item'>
+              <Link to = "book" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Acervo</Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link to = "about" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Serviços</Link>
+            </li>
+            
           </ul>
         </div>
       </div>

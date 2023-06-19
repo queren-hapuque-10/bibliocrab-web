@@ -1,9 +1,10 @@
 .navbar{
     padding: 1.8rem 0;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(236, 14, 14, 0.05) 0px 4px 6px -2px;
+    margin-left: 0;
 }
 .navbar-brand{
-    width: 55px;
+    max-width: 200px;
 }
 .navbar-brand span{
     margin-left: 2rem;
@@ -60,7 +61,7 @@
     }
     .nav-item{
         margin-bottom: 0;
-        margin-left: 2.8rem;
+        margin-left: 1.8rem;
     }
     .nav-link{
         color: var(--blue-color);
