@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.body-banner{
+    box-sizing: border-box;
+   /* font-family: 'Roboto',sans-serif; */   
+}
+
+.main-banner{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    background: linear-gradient(#98ab69c3, #2a1fa5d0), url("../../images/raizes.jpeg") center/cover no-repeat;
+}
+.text-bx{
+    width: 40%;
+    margin-left: 75px;
+}
+.text-bx h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: rgb(4, 4, 110);
+    background: linear-gradient(#98ab69c3, #1f2aa55f);
+    border-radius: 10px;
+}
+.text-bx h1 b{
+    color: #ffefe7;
+}
+.text-bx p{
+    background-color: #ff6c28bf;
+    padding: 0 0 0 11px ;
+    border-radius: 10px;
+    color: #ffecdf;
+    font-weight: bolder;
+    margin-top: 20px;
+    font-size: 18px;
+}
+.img-bx{
+    width: 40%;
+}
+.img-bx img{
+    width: 300px;
+}
+@media (max-width:970px) {
+
+    .main-banner{
+        flex-direction: column;
+    }
+    .text-bx,
+    .img-bx{
+        width: 85%;
+        text-align: center;
+    }
+.img-bx{
+    width: 300px;
+    margin-top: -10%;
+}
+    .text-bx{
+        margin-left: 0;
+        margin-top: 10%;
+    }
+    .text-bx p{
+        font-size: 14px;
+        
+    }
+
+}

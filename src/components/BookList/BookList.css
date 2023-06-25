@@ -1,6 +1,6 @@
 .booklist, .book-details{
     padding: 3rem 0;
-    background-color: #f8f9fa;
+    background: linear-gradient(rgb(255, 255, 255), rgba(12, 99, 37, 0.49), rgba(1, 1, 104, 0.55))
 }
 .booklist-content{
     gap: 3rem;

@@ -1,0 +1,16 @@
+.container{
+
+    justify-content: space-between;
+}
+.container .box{
+
+    position: relative;
+    width: 350px;
+    padding: 40px;
+    background-color: rgb(255, 255, 255);
+box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+border-radius: 4px;
+margin: 20px;
+box-sizing: border-box;
+overflow: hidden;
+}

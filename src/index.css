@@ -4,7 +4,7 @@
   --pink-color: #d9176d;
   --grey-color: #f3f3f3;
   --white-color: #fff;
-  --blue-color: #241E58;;
+  --blue-color: #241E58;
   --light-black-color: #717171;
   --transition: all 300ms ease-in-out;
 }
@@ -109,7 +109,7 @@ input{
   display: grid;
 }
 .container{
-  max-width: 1200px;
+  /*max-width: 1200px;*/
   margin: 0 auto;
   padding: 0 2rem;
 }

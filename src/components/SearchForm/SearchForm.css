@@ -1,6 +1,6 @@
 .search-form{
-    width: 95%;
-    max-width: 650px;
+    width: 100%;
+    max-width: 650px;   
 }
 .search-form-elem{
     padding: 1.4rem 2.8rem;

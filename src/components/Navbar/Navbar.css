@@ -3,6 +3,9 @@
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(236, 14, 14, 0.05) 0px 4px 6px -2px;
     margin-left: 0;
 }
+.navbar .container{
+    max-width: 1200px;
+}
 .navbar-brand{
     max-width: 200px;
 }

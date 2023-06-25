@@ -1,10 +1,11 @@
 .header-content{
     min-height: 75vh;
-    background: linear-gradient(rgba(174, 68, 39, 0.3), rgba(86, 39, 174, 0.5)), url("../../images/library-img.jpg") center/cover no-repeat;
+    background: linear-gradient(#98ab69c3, #2a1fa5d0), url("../../images/raizes.jpeg") center/cover no-repeat;
     flex-direction: column;
 }
 .header-title{
     font-size: 4.2rem;
+    color: rgb(253, 252, 255);
 }
 .header-text{
     margin-top: -1.8rem;
