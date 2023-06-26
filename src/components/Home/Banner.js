@@ -1,5 +1,5 @@
 import React from "react";
-import crab from '../../images/icon-crab.png';
+import icon_crab from '../../images/icon_crab.png';
 import './Banner.css';
 
 export default function Banner(){
@@ -14,7 +14,7 @@ export default function Banner(){
                 </div>
 
             <div class="img-bx">
-                <img src={crab}/>
+                <img src={icon_crab}/>
             </div>
         </main>
 

@@ -38,7 +38,7 @@ const Navbar = () => {
             </li>
 
             <li className='nav-item'>
-              <Link to = "/book" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Login</Link>
+              <Link to = "/services" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Login</Link>
             </li>
 
           </ul>

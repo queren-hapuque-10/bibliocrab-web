@@ -20,17 +20,15 @@
     font-size: 3rem;
     text-transform: uppercase;
     color: rgb(4, 4, 110);
-    background: linear-gradient(#98ab69c3, #1f2aa55f);
-    border-radius: 10px;
 }
 .text-bx h1 b{
-    color: #ffefe7;
+    color: #fcf6f4;
 }
 .text-bx p{
     background-color: #ff6c28bf;
     padding: 0 0 0 11px ;
     border-radius: 10px;
-    color: #ffecdf;
+    color: #fff7f2;
     font-weight: bolder;
     margin-top: 20px;
     font-size: 18px;

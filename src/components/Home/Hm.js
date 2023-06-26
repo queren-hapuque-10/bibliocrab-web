@@ -1,6 +1,6 @@
 import React from 'react';
 import "./Home.css";
-import lendo from '../../images/lendo.png';
+import todolist from '../../images/todolist.png';
 import {AiFillRead} from 'react-icons/ai';
 import {GoChecklist} from 'react-icons/go';
 import {AiFillCalculator} from 'react-icons/ai';
@@ -13,7 +13,9 @@ import sicronizacao from '../../images/sicronizacao.png';
 import read from '../../images/read.png';
 import bookglass from '../../images/bookglass.png';
 import { GiSadCrab } from 'react-icons/gi';
-import banner2 from '../../images/banner2.png';
+import crabmanguebeat from '../../images/crabmanguebeat.jpg';
+import livro1 from '../../images/livros1.jpg';
+import livros_formatura from '../../images/livros-formatura.jpg';
 
 export default function Hm() {
   return (
@@ -26,8 +28,12 @@ export default function Hm() {
             <div className='container'> 
                 <div className='sobre-mais-text'>
                     <h3>Sobre nós</h3>
-                    <p>biblioteca virtual dinâmica, composta por uma vasta opção de livros e artigos</p>
-                    <a href='#' className='btn animate-btn'>Sobre nós</a>
+                    <p>
+                   Desenvolvida para atender as principais dificuldades dos leitores, a plataforma
+                   tem com objetivo unir a tecnologia e leitura para a promoção da eficiência e maximização da rotina de leitura.
+                    </p>
+
+                    <a href='../../About' className='btn animate-btn'>Sobre nós</a>
                 </div>
                 <div className='sobre-mais-img'>
                     <img src={bookglass}/>
@@ -131,27 +137,28 @@ export default function Hm() {
 {/*Objetivos*/}
 <section className='objetivos'>
     <div className='container'>
-        <h3>Objetivos do Cronograma</h3>
+        <h3>Principais Impactos</h3>
         <p>Leia os principais objetivos do cronograma pela Bibliocrab</p>
         <div className='cards'>
         <div className='card-item'>
-            <center><div className='icon-obj'><AiFillRead size={30}/></div></center>
-            <p className='nome-obj'>Incentivo e Interação</p>
-            <p className='desc-obj'>Incentivo através da interação - 
-            Crescimento do mangue através da realização de metas.</p>
+        <center><div className='icon-obj'><AiFillRead size={30}/></div></center>
+            <p className='nome-obj'>Pessoal</p>
+            <p className='desc-obj'> Os leitores possuem mais autonomia na utilização dos materiais, com mais propriedade e de forma mais organizada.</p>
         </div>
 
         <div className='card-item'>
         <center><div className='icon-obj'><LuCalendarClock size={30}/></div></center>
-            <p className='nome-obj'>Divisão da Leitura</p>
-            <p className='desc-obj'>Cálculo e organização da leitura
-            através da disponibilidade de tempo.</p>
+            <p className='nome-obj'>FUNCIONAL </p>
+            <p className='desc-obj'> Praticidade gerada pela possibilidade de levar todos os seus livros em uma única plataforma.</p>
         </div>
 
         <div className='card-item'>
         <center><div className='icon-obj'><GoChecklist size={30}/></div></center>
-            <p className='nome-obj'>CheckLists de validaçãos</p>
-            <p className='desc-obj'>Checklists semanais para acompanhamento</p>
+            <p className='nome-obj'>SOCIAL </p>
+        <p className='desc-obj'>Mais sustentável, por ser 
+        menos danoso ao meio ambiente; 
+        Mais econômico, pela possibilidade de ter acessos simultâneos a uma mesma obra.
+        </p>
         </div>
         </div>
     </div>
@@ -160,36 +167,54 @@ export default function Hm() {
 {/*Blog*/}
 <section className='blog' id='blog'>
     <div className='container-blog'>
-            <h3>Blog</h3>
+     <h3>Nosso Blog</h3>
+        <p>Confira o blog da bibliocrab e encontre as principais novidades</p>
 
 <div className='cards-blog'>
     <div className='card-item-blog'>
-        <img />
-        <h4></h4>
-        <p></p>
+        <div className='img-blog'>
+        <img src={livros_formatura}/>
+        </div>
+
+        <h4>Movimento Manguebeat</h4>
+        <p>“o que fazer para não afundar na depressão crônica que paralisa os cidadãos?
+             Como devolver o ânimo, deslobotomizar e recarregar as baterias da cidade? 
+             Simples! Basta injetar um pouco de energia na lama e estimular 
+             o que ainda resta de fertilidade nas veias do Recife”.</p>
+              
+              <button>Ler Mais</button>
     </div>
 
     <div className='card-item-blog'>
-        <img />
-        <h4></h4>
-        <p></p>
+        
+        <div className='img-blog'>
+            <img src={livro1}/>
+        </div>
+            <h4>Monumento Caranguejo Elétrico</h4>
+       
+        <p>“o que fazer para não afundar na depressão crônica que paralisa os cidadãos?
+             Como devolver o ânimo, deslobotomizar e recarregar as baterias da cidade? 
+             Simples! Basta injetar um pouco de energia na lama e estimular 
+             o que ainda resta de fertilidade nas veias do Recife”.</p>
+             <button>Ler Mais</button>
     </div>
 
     <div className='card-item-blog'>
-        <img />
-        <h4></h4>
-        <p></p>
+    <div className='img-blog'>
+            <img src={todolist}/>
+        </div>
+        <h4>Movimento Manguebeat</h4>
+        <p>“o que fazer para não afundar na depressão crônica que paralisa os cidadãos?
+             Como devolver o ânimo, deslobotomizar e recarregar as baterias da cidade? 
+             Simples! Basta injetar um pouco de energia na lama e estimular 
+             o que ainda resta de fertilidade nas veias do Recife”.</p>
+
+             <button>Ler Mais</button>
     </div>
 
-    <div className='card-item-blog'>
-        <img />
-        <h4></h4>
-        <p></p>
-    </div>
 </div>
     </div>
 </section>
-
 
         </div>
             

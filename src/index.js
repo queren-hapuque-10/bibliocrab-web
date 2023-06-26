@@ -6,10 +6,7 @@ import {
 import { AppProvider } from './context';
 import './index.css';
 import Home from './pages/Home/Home';
-import About from "./pages/About/About";
-import BookList from "./components/BookList/BookList";
 import BookDetails from "./components/BookDetails/BookDetails";
-import Header from './components/Header/Header';
 import Acervo from './pages/Acervo/Acervo';
 import Ab from './pages/About/Ab';
 
