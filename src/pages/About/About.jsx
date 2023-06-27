@@ -1,19 +1,18 @@
 import React from 'react';
-import "./About.css";
-import cantinho from '../../images/image-removebg-preview (11).png';
-import bookglass from '../../images/image-removebg-preview (8).png';
+import { AiFillRead } from 'react-icons/ai';
+import { GoChecklist } from 'react-icons/go';
+import { LuCalendarClock } from 'react-icons/lu';
+import cantinho from '../../images/2.jpg';
 import chico from '../../images/image-removebg-preview (14).png';
-import {AiFillRead} from 'react-icons/ai';
-import {GoChecklist} from 'react-icons/go';
-import {LuCalendarClock} from 'react-icons/lu';
+import "./About.css";
 
 const About = () => {
   return (
     <div>
 <section className='about'>
       <div className='container_about'>
-        <div className='section-title'>
-          <h2 id="quemsomos">Quem Somos?</h2>
+      <div className='section-title'>
+          <h2 id="manguetown">BEM-VINDOS ao MANGUETOWN da leitura!</h2>
         </div>
 
         <div className='about-content grid'>
@@ -41,25 +40,25 @@ const About = () => {
 
       <section className='propostas'>
     <div className='cont_proposta'>
-        <h3>Proposta de Valor</h3>
+        <h3>Cronograma</h3>
         <p>Leia os principais objetivos do cronograma pela Bibliocrab</p>
         <div className='cards-proposta'>
         <div className='card-item-proposta'>
             <center><div className='icon-obj'><AiFillRead size={30}/></div></center>
-            <p className='nome-obj'>META</p>
-            <p className='desc-obj'> Eficiência de leitura de acordo com cada disponibilidade de tempo.</p>
+            <p className='nome-obj'>Incentivo Através da Interação</p>
+            <p className='desc-obj'>Crescimento do mangue através da realização das metas.</p>
         </div>
 
         <div className='card-item-proposta'>
         <center><div className='icon-obj'><LuCalendarClock size={30}/></div></center>
-            <p className='nome-obj'>INCENTIVO </p>
-            <p className='desc-obj'> Avisos, metas e interação com a plataforma.</p>
+            <p className='nome-obj'>Divisão da Leitura em Metas </p>
+            <p className='desc-obj'>Cálculo e organização da leitura através da disponibilidade de tempo.</p>
         </div>
 
         <div className='card-item-proposta'>
         <center><div className='icon-obj'><GoChecklist size={30}/></div></center>
-            <p className='nome-obj'>DIFERENCIAL </p>
-            <p className='desc-obj'>Cronograma personalizado, sugestão de leitura.
+            <p className='nome-obj'>Check-Lists de validação </p>
+            <p className='desc-obj'>Check-Lists semanais para acompanhamento.
 </p>
         </div>
         </div>
@@ -77,26 +76,22 @@ const About = () => {
                     </p>
                     <a className='btn animate-btn'> Uma manutenção virtual no mangue literário.</a>
                 </div>
-                <div className='sobre-mais-img'>
-                    <img src={bookglass}/>
-                </div> 
 
         </div>
         </section>
         </div> 
 
-        <div className='section-title'>
-          <h2 id="manguetown">BEM-VINDOS ao MANGUETOWN da leitura!</h2>
-        </div>
 <section className='about'>
       <div className='container_about'>
-
+      <div className='section-title'>
+          <h2 id="crab-leitores">O manifesto "Caranguejos Leitores"</h2>
+        </div>
   
         <div className='about-content grid'>
             
           <div className='about-text'>
             
-            <h2 id='mangue-title'>Releitura - O manifesto "Caranguejos com cérebro"</h2>
+            <h2 id='mangue-title'>Releitura - O manifesto Caranguejos com cérebro</h2>
 
             <p id='releitura'>
             “Emergência! Um rápido update de leitura ou as cidades pifam seu armazenamento! 
@@ -133,22 +128,26 @@ const About = () => {
     <section className='propostas'>
     <div className='cont_proposta'>
         <h3>Conceitualização</h3>
-        <p>Leia os principais impactos da bibliocrab na sociedade</p>
+        <p>Leia As principais referências socias da bibliocrab</p>
         <div className='cards-proposta'>
         <div className='card-item-context'>
-            <p className='nome-obj'>Manguebit</p>
-            <p className='desc-obj'> Os leitores possuem mais autonomia na utilização dos materiais, com mais propriedade e de forma mais organizada.</p>
+            <p className='nome-obj'><b>MANGUEBIT</b></p>
+            <p className='desc-obj'>Movimento gerado pelo Manifesto 
+"Caranguejos Leitores", visando a prática 
+eficiente da leitura através da imersão literária.</p>
         </div>
 
         <div className='card-item-context'>
-            <p className='nome-obj'>Caranguejo CPU </p>
-            <p className='desc-obj'> Praticidade gerada pela possibilidade de levar todos os seus livros em uma única plataforma.</p>
+            <p className='nome-obj'><b>ANTROPOCENO</b></p>
+            <p className='desc-obj'>Refere-se aos impactos sociais em proporções nunca vistas, os efeitos das desigualdades sociais e as mudanças 
+            no nosso planeta que afetam diretamente o processo organizacional do estudo.</p>
         </div>
 
         <div className='card-item-context'>
-            <p className='nome-obj'>Roteador na Lama </p>
+            <p className='nome-obj'><b>ROTEADOR NA LAMA</b></p>
         <p className='desc-obj'>
-        Amplio de acessibilidade e incentivo à leitura.
+        O Roteador como símbolo de transmissão 
+de conhecimento,  tem uma base sólida no material orgânico das tradições educacionais.
 </p>
         </div>
         </div>

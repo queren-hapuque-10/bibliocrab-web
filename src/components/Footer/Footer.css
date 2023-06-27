@@ -64,15 +64,15 @@ footer {
 }
 
 #instagram {
-    background-color: #ce1189;
+    background: linear-gradient(#ce1189, rgba(247, 247, 41, 0.755));
 }
 
 #facebook {
-    background-color: #1b2bb8;
+    background-color: #2161c7;
 }
 
 #whatsapp {
-    background-color: #108b31;
+    background-color: #26b34c;
 }
 
 .footer-list {

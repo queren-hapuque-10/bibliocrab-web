@@ -2,21 +2,24 @@ import React from "react";
 import icon_crab from '../../images/icon_crab.png';
 import './Banner.css';
 
+
 export default function Banner(){
     return(
-        <div className="body-banner"> 
+        <div className="body-banner">
         <main className="main-banner">
-                    <div class="text-bx">
-                <h1> Bibliocrab <b> virtualizando conhecimento </b></h1>
+                  {/* <div class="text-bx">
+                <h1> Bibliocrab <b> virtualizando o conhecimento </b></h1>
                 <p>
-                    Mergulhe conosco nesse mangue literário e divirta-se!
+                    Prepare-se para uma imersão literária!
                 </p>
                 </div>
 
+
             <div class="img-bx">
                 <img src={icon_crab}/>
-            </div>
+            </div>*/} 
         </main>
+
 
     </div>
     )

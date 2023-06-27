@@ -10,7 +10,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    background: linear-gradient(#98ab69c3, #2a1fa5d0), url("../../images/raizes.jpeg") center/cover no-repeat;
+    background: linear-gradient(#98ab6900, #2a1fa500), url("../../images/1.jpg") center/cover no-repeat;
 }
 .text-bx{
     width: 40%;

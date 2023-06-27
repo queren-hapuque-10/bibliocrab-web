@@ -40,7 +40,7 @@ function Footer(){
             <h3>Quem Somos</h3>
         </li>
         <li>
-            <a href="#" class="footer-link">Quem Somos</a>
+            <a href="/about" class="footer-link">Quem Somos</a>
         </li>
         <li>
             <a href="#" class="footer-link">Editoras Parceiras</a>

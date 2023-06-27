@@ -1,18 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" );
 
 
+
+
 /*.about{
     padding: 3rem 0;
 }*/
+
 
 .about-content{
     gap: 4rem;
 }
 
+
 /*
 .about-title{
     margin: 1rem 0;
 }*/
+
 
 .container_about{
     padding: 0;
@@ -29,9 +34,11 @@
     opacity: 0.9;
 }
 
+
 .about-content, .about-text{
     padding: 0 30px;
 }
+
 
 #quemsomos{
     display: flex;
@@ -44,6 +51,7 @@
     background-image: linear-gradient(135deg, rgba(44, 66, 155, 0.883) 0px, rgba(39, 34, 111, 0.795) 100%);
     padding: 50px;
 }
+
 
 @media screen and (min-width: 800px){
     .about-content{
@@ -61,6 +69,26 @@
 }
 
 
+.cont-missao{
+    align-items: center;
+}
+.missao-text{
+   
+    text-align: center;
+}
+
+
+.cont-missao{
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px;
+    color: rgb(31, 104, 177);
+}
+
+
 .propostas h3{
     text-align: center;
     font-size: 35px;
@@ -70,6 +98,10 @@
     text-align: center;
     color: #ff651d;
 }
+
+
+
+
 .cards-proposta{
     display: flex;
     justify-content: center;
@@ -99,15 +131,13 @@
     transition: 0.3s;
 }
 
+
 .propostas .card-item-proposta .desc-obj{
     font-size: 15px;
     padding: 0 15px;
     transition: 0.3s;
 }
 
-.cont-missao{
-    flex-direction: column;
-}
 
 #manguetown{
     background: linear-gradient( #5e6caac3 , #5c4899 ), url("../..//images/raizes.jpeg") center/cover no-repeat;
@@ -120,11 +150,24 @@
     padding: 0 40px;
     color: rgb(249, 252, 255);
 }
+#crab-leitores{
+    background: linear-gradient( #5e6caac3 , #5c4899 );
+    height: 28.3rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 40px;
+    color: rgb(249, 252, 255);
+    margin-top: 30px;
+}
 #mangue-title{
     font-size: 30px;
     color: #ff7333;
     margin-top: 5%;
 }
+
 
 #releitura{
     font-weight: bolder;
@@ -135,6 +178,8 @@
 #conceito{
     margin-top: 50px;
 }
+
+
 
 
 .propostas .card-item-context{
@@ -148,6 +193,8 @@
     padding: 5px 15px;
 }
 
+
 .propostas .card-item-context p{
     color: #0f003e;
 }
+
