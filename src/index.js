@@ -1,15 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-  BrowserRouter, Routes, Route
+  BrowserRouter,
+  Route,
+  Routes
 } from 'react-router-dom';
+import BookDetails from "./components/BookDetails/BookDetails";
 import { AppProvider } from './context';
 import './index.css';
-import Home from './pages/Home/Home';
-import BookDetails from "./components/BookDetails/BookDetails";
-import Acervo from './pages/Acervo/Acervo';
 import Ab from './pages/About/Ab';
+import Acervo from './pages/Acervo/Acervo';
 import Bk from './pages/Acervo/Usuario/Bk';
+import Adm from './pages/FormAdm/Adm';
+import Form from './pages/FormCadastro/Form';
+import Home from './pages/Home/Home';
 import Servicos from './pages/Servicos/Servicos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -23,6 +27,8 @@ root.render(
           <Route path = "/book/:id" element = {<BookDetails />} />
           <Route path = "/books" element = {<Bk/>} />
           <Route path='/services' element = {<Servicos/>}/>
+          <Route path = "/cadcliente" element = {<Form/>}/>
+          <Route path = "/cadadm" element = {<Adm/>}/>
       </Routes>
     </BrowserRouter>
   </AppProvider>

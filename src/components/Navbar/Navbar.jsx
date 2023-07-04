@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+import { FaUserCircle } from "react-icons/fa";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { Link } from 'react-router-dom';
-import "./Navbar.css";
 import logoImg from "../../images/logo.png";
-import {HiOutlineMenuAlt3} from "react-icons/hi";
-import {FaUserCircle} from "react-icons/fa";
+import "./Navbar.css";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -41,10 +41,17 @@ const Navbar = () => {
             <li className='nav-item'>
               <Link to = "/book" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>blog</Link>
             </li>
+  
 
             <li className='nav-item'>
-              <Link to = "/services" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><FaUserCircle size={28}/></Link>
+              <Link to = "/cadcliente" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><FaUserCircle size={28}/></Link>
             </li>
+
+            <li className='nav-item'>
+              <Link to = "/cadadm" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Adm</Link>
+            </li>
+
+                   
 
           </ul>
         </div>
