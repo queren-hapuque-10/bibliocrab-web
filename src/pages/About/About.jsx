@@ -4,6 +4,9 @@ import { GoChecklist } from 'react-icons/go';
 import { LuCalendarClock } from 'react-icons/lu';
 import cantinho from '../../images/2.jpg';
 import chico from '../../images/image-removebg-preview (14).png';
+import manguebit from '../../images/manguebit.png';
+import antropoceno from '../../images/antropoceno.png';
+import roteador from '../../images/roteador.png';
 import "./About.css";
 
 const About = () => {
@@ -131,6 +134,7 @@ const About = () => {
         <p>Leia As principais referências socias da bibliocrab</p>
         <div className='cards-proposta'>
         <div className='card-item-context'>
+           <center><img className="img-conceito" src={manguebit}/></center> 
             <p className='nome-obj'><b>MANGUEBIT</b></p>
             <p className='desc-obj'>Movimento gerado pelo Manifesto 
 "Caranguejos Leitores", visando a prática 
@@ -138,12 +142,14 @@ eficiente da leitura através da imersão literária.</p>
         </div>
 
         <div className='card-item-context'>
+          <center><img className="img-conceito" src={antropoceno}/></center>
             <p className='nome-obj'><b>ANTROPOCENO</b></p>
             <p className='desc-obj'>Refere-se aos impactos sociais em proporções nunca vistas, os efeitos das desigualdades sociais e as mudanças 
             no nosso planeta que afetam diretamente o processo organizacional do estudo.</p>
         </div>
 
         <div className='card-item-context'>
+         <center><img className="img-conceito" src={roteador}/></center> 
             <p className='nome-obj'><b>ROTEADOR NA LAMA</b></p>
         <p className='desc-obj'>
         O Roteador como símbolo de transmissão 

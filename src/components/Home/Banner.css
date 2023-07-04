@@ -5,13 +5,6 @@
    /* font-family: 'Roboto',sans-serif; */   
 }
 
-.main-banner{
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    background: linear-gradient(#98ab6900, #2a1fa500), url("../../images/1.jpg") center/cover no-repeat;
-}
 .text-bx{
     width: 40%;
     margin-left: 75px;

@@ -55,7 +55,6 @@ export default function Hm() {
         <p>Conheça as principais funcionalidades e benefícios que oferecemos!</p>
         <div className='rows-cards'>
 
-
             <div className='row-card-item'>
                 <img src={calendario}/>
                 <p className='nome-service'><strong>Definição de Metas</strong></p>

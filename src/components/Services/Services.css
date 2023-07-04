@@ -1,1 +1,57 @@
+#crab1, #crab2, #crab3{
+    background-color: transparent;
+}
+.container-planos p {
+    text-align: center;
+    margin-bottom: 15px;
+    }
 
+.services .rows-cards-planos{
+    background-color: #d5dbf9;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.services .row-card-item-plano{
+    background-color: #ffffff;
+    width: 325px;
+    padding: 40px;
+    border-radius: 14px;
+    margin: 20px;
+    transition: 0.3s;
+    text-align: center;
+    font-size: 17px;
+}
+.preco{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #f44100;
+    font-size: 18px;
+}
+
+.assinar{
+    padding: 7px 10px;
+    background-color: #ff6c28;
+    border-radius: 20px;
+    margin-top: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    transition: 0.3s;
+}
+.assinar:hover{
+    background-color: rgb(11, 11, 101);
+}
+.services .row-card-item-plano img{
+    background-color: #ff6c28;
+    border-radius: 14px;
+    width: 100px;
+    padding: 9px;
+    transition: 0.3s;
+}
+
+.nome-plano{
+    font-size: 20px;
+    margin-top: 15px;
+}

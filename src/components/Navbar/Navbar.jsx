@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import "./Navbar.css";
 import logoImg from "../../images/logo.png";
 import {HiOutlineMenuAlt3} from "react-icons/hi";
+import {FaUserCircle} from "react-icons/fa";
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -34,11 +35,15 @@ const Navbar = () => {
             </li>
             
             <li className='nav-item'>
-              <Link to = "/book" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Blog</Link>
+              <Link to = "/services" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>serviços</Link>
             </li>
 
             <li className='nav-item'>
-              <Link to = "/services" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Login</Link>
+              <Link to = "/book" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>blog</Link>
+            </li>
+
+            <li className='nav-item'>
+              <Link to = "/services" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><FaUserCircle size={28}/></Link>
             </li>
 
           </ul>
