@@ -6,34 +6,32 @@ import './CadCliente.css';
 
 function CadCliente (){
 	
-
-const [idCadastro, setIdCadastro] = useState();
+const { state } = useLocation();
+const [idCliente, setIdCliente] = useState();
 const [nome, setNome] = useState();
-const [dataNasc, setDataNasc] = useState();
+const [dataNascimento, setDataNascimento] = useState();
 const [email,setEmail] = useState();
 const [cpf, setCpf] = useState();
 const [rg, setRg] = useState();
-const [foneCel, setFoneCel] = useState();
+const [celular, setCelular] = useState();
 const [endereco, setEndereco] = useState();
-const [criarSenha, setCriarSenha] = useState();
+const [senha, setSenha] = useState();
 
 
-
-const { state } = useLocation();
    useEffect(() => {
 	
 	if (state != null && state.id != null) {
-	axios.get( "api/cadastro/" + state.id)
+	axios.get( "/cliente" + state.id)
     .then((response) => {
-	setIdCadastro(response.data.id)
+	setIdCliente(response.data.idCliente)
     setNome(response.data.nome)
-	setDataNasc(formatarData(response.data.dataNasc))
+	setDataNascimento(formatarData(response.data.dataNascimento))
     setEmail(response.data.email)
 	setCpf(response.data.cpf)
 	setRg(response.data.rg)
-	setFoneCel(response.data.foneCel)
+	setCelular(response.data.celular)
 	setEndereco(response.data.endereco)
-	setCriarSenha(response.data.criarSenha)
+	setSenha(response.data.senha)
 
 
 		})
@@ -46,26 +44,33 @@ const { state } = useLocation();
 		let cadastroRequest = {
 
 			nome:nome,
-			dataNasc:dataNasc,
+			dataNascimento:dataNascimento,
             email:email,
 			cpf:cpf,
 			rg:rg,
-			foneCel:foneCel,
+			celular:celular,
 			endereco:endereco,
-			criarSenha:criarSenha,
+			senha:senha
 		}
 
-		if (idCadastro != null) { //Alteração:
-			axios.put( "api/cadastro/" + idCadastro, cadastroRequest)
+	/*	if (idCliente != null) { //Alteração:
+			axios.put( "api/cadastro/" + idCliente, cadastroRequest)
 			.then((response) => { console.log('cadastro alterado com sucesso.') })
 			.catch((error) => { console.log('Erro ao alterar o cadastro.') })
 		} else { //Cadastro:
 			axios.post( "api/cadastro", cadastroRequest)
 			.then((response) => { console.log('Cadastrado com sucesso.') })
 			.catch((error) => { console.log('Erro ao incluir o cadastro.') })
-		}
- 
-	}
+		} */
+
+        axios.post("http://localhost:8082/cliente", cadastroRequest)
+        .then((response) => { 
+            console.log('Cliente cadastrado com sucesso.') 
+            
+    })
+        .catch((error) => { console.log('Erro ao incluir o Cliente.') })  
+
+}  
 
 	function formatarData(dataParam) {
 
@@ -82,7 +87,7 @@ const { state } = useLocation();
     }
 	
         return(
-
+<>
             <div className="cad-cliente">
          {/*<div className='crab-img'>
     <img src = {crab} alt = "" />
@@ -97,22 +102,22 @@ const { state } = useLocation();
                         <input type="text" id="nome" placeholder="Digite o seu nome completo" 
                         value={nome}
                         onChange={e => setNome(e.target.value)}
-                        required/>
+                        />
                     </div>
     
                     <div class="input-cadastro" id="nasccad">
                         <label for="data"> Data de Nascimento </label>
                         <input type="date" name="data" id="data"
-                        value={dataNasc}
-                        onChange={e => setDataNasc(e.target.value)}
+                        value={dataNascimento}
+                        onChange={e => setDataNascimento(e.target.value)}
                         />
                     </div>
 
                     <div class="input-cadastro" id="celcad">
                             <label for="foneCel"id="celab">Celular</label>
                             <input type="Celular" id="foneCel" placeholder="(99) 99999-9999" 
-                            value={foneCel}
-                            onChange={e => setFoneCel(e.target.value)}
+                            value={celular}
+                            onChange={e => setCelular(e.target.value)}
                             required/>
                         </div>
                    
@@ -154,8 +159,8 @@ const { state } = useLocation();
                          <div class="input-cadastro" id="senhacad">
                             <label for="criarSenha" id="senhalab">Criar Senha</label>
                             <input type="senha" id="criarSenha" placeholder="EX:12345678" 
-                            value={criarSenha}
-                            onChange={e => setCriarSenha(e.target.value)}
+                            value={senha}
+                            onChange={e => setSenha(e.target.value)}
                             required/>
                         </div>
                     
@@ -166,15 +171,15 @@ const { state } = useLocation();
                     </div>
 
                     <div class="input-cadastro" id="segbutcad">
-                    <Link to={"/FormAssinatura"}>
-                    <button id='segbotao' >Próximo</button>
+                    <Link >
+                    <button id='segbotao' onClick={() => salvar()}>Próximo</button>
                     </Link>
                 </div>
     
                 </form>
             </div>
             </div>
-        
+        </>
             
       );
 }
