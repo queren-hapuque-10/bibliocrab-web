@@ -7,7 +7,7 @@ import './CadCliente.css';
 function CadCliente (){
 	
 
-	const [idCadastro, setIdCadastro] = useState();
+const [idCadastro, setIdCadastro] = useState();
 const [nome, setNome] = useState();
 const [dataNasc, setDataNasc] = useState();
 const [email,setEmail] = useState();
@@ -80,20 +80,18 @@ const { state } = useLocation();
 
         return dataFormatada
     }
-	 
-		
-    
 	
         return(
 
-            <>
-          <div className='crab-img'>
+            <div className="cad-cliente">
+         {/*<div className='crab-img'>
     <img src = {crab} alt = "" />
-     </div>
+     </div>*/} 
             <div class="form-cadastro" id="formcadastro">
          
                 <form action="#">
-                <p id="cad">Cadastrar-se</p>
+                <p id="cad">Criar Conta</p>
+                
                     <div class="input-cadastro" id="nomecad">
                         <label for="nome" id="nomelab">Nome Completo </label>
                         <input type="text" id="nome" placeholder="Digite o seu nome completo" 
@@ -101,8 +99,6 @@ const { state } = useLocation();
                         onChange={e => setNome(e.target.value)}
                         required/>
                     </div>
-
-                   
     
                     <div class="input-cadastro" id="nasccad">
                         <label for="data"> Data de Nascimento </label>
@@ -175,14 +171,11 @@ const { state } = useLocation();
                     </Link>
                 </div>
     
-    
-    
-                   
-    
                 </form>
             </div>
+            </div>
         
-                </>
+            
       );
 }
 	export default CadCliente;

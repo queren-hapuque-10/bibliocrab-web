@@ -29,7 +29,7 @@ function Services(){
               <center className="preco">Por: R$70,00</center>
                Você terá acesso à todos os recursos e funcionalidades da Bibliocrab por <center><b>1 mês!</b> </center>
                 </p>
-                <a href="/login"><button className="assinar">Assine agora</button></a>
+                <a href="/cadcliente"><button className="assinar">Assine agora</button></a>
             </div>
 
 
@@ -40,7 +40,7 @@ function Services(){
                <center className="preco">Por: R$160,00</center>
                Você terá acesso à todos os recursos e funcionalidades da Bibliocrab por <center><b>3 meses!</b> </center>
                  </p>
-                 <a href="/login"><button className="assinar">Assine agora</button></a>
+                 <a href="/cadcliente"><button className="assinar">Assine agora</button></a>
             </div>
 
 
@@ -51,7 +51,7 @@ function Services(){
                <center className="preco">Por: R$540,00</center> 
                Você terá acesso à todos os recursos e funcionalidades da Bibliocrab por <center><b>6 meses!</b> </center>
                 </p>
-                <a href="/login"><button className="assinar">Assine agora</button></a>
+                <a href="/cadcliente"><button className="assinar">Assine agora</button></a>
             </div>
             </div>
             </div>

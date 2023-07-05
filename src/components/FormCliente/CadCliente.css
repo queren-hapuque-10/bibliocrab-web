@@ -184,7 +184,7 @@ font-size: 13px;
     height: 30px;
     color: black;
     padding: 10px;
-    margin-left: 5%;
+   /* margin-left: 5%;*/
     outline: none;
     border: none;
     font-size: 1.2rem;
@@ -193,14 +193,20 @@ font-size: 13px;
     outline: 1px solid red;
 }
 
+.cad-cliente{
+    background: linear-gradient( #d5dbf99b , #d5dbf9e0), url("../..//images/CANVASBIBLIOCRAB\ \(2\).jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 .input-cadastro label{
-    color: white;
-    font-family: inherit;
+color: white;
+font-family: inherit;
 font-weight: 500;
 margin-left: 5%;
 font-size: 13px;
-
-
 }
 
 #formcadastro,.crab-img{
@@ -209,18 +215,16 @@ font-size: 13px;
 
 
 #formcadastro{
-    padding: 15px;
-    z-index: 90;
     width: 400px;
     height: 600px;
-    background: linear-gradient(90deg,rgba(255, 0, 0, 0.850),rgba(255, 68, 0, 0.850)); /* rgb(0, 46, 93)*/;
+    background: linear-gradient(90deg,rgb(252, 21, 21),rgb(252, 93, 35)), url("../..//images/CANVASBIBLIOCRAB\ \(3\).jpg") center/cover no-repeat;/* rgb(0, 46, 93)*/;
     border-radius: 10px;
     box-sizing: border-box;
     transform: translateX(-50%);
     align-items: center;
-    margin-left: 22%;
-    margin-bottom: 1%;
+    margin-bottom: 5%;
     margin-top: 7%;
+    margin-right: -5%;
 }
 
 #primbotao{
@@ -234,7 +238,7 @@ font-size: 13px;
     border-radius: 5px;
     display: inline-block;
     margin-top: 20px;
-    margin-left: 25px;
+   /* margin-left: 25px;*/
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
@@ -271,7 +275,7 @@ font-size: 13px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    margin-left: 35%;
+   /* margin-left: 35%;*/
     width: 25%;
     height: 30px;
 }
@@ -324,7 +328,7 @@ font-family: inherit;
     #formcadastro{
         width: 250px;
         height: 550px;   
-        margin-left: 50%;
+     /*   margin-left: 50%;*/
         margin-top: 15%;
     }
 
@@ -344,21 +348,21 @@ font-family: inherit;
     }
 #primbotao{
     width: 35%;  
-    margin-left: 6px;
+  margin-left: 6px;
 }
 
 #segbotao{
-    margin-left: 50px;
+   margin-left: 50px;
     width: 35%;
 }  
 }
 
-@media (max-width:1025px) and (min-width:801px){
+@media (min-width:1025px) and (max-width:801px){
     #formcadastro{
         width: 300px;
         height: 600px;  
         margin-top: 15%;
-        margin-left: 20%;
+    /*    margin-left: 10%; */
     }
     .crab-img{
         width: 250px;
