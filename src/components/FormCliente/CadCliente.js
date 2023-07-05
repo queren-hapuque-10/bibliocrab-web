@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import crab from "../../images/crab.jpeg";
 import './CadCliente.css';
 
 function CadCliente (){
@@ -158,13 +157,13 @@ const { state } = useLocation();
                             onChange={e => setCriarSenha(e.target.value)}
                             required/>
                         </div>
-                    
+                        <h1 id="log"> Já tem uma conta? <a href="/login" id="link"> Login </a> </h1>
                         <div class="input-cadastro" id="primbutcad">
                         <Link to={"/"}>
                     <button id='primbotao'>Voltar</button>
                     </Link>
                     </div>
-
+                    
                     <div class="input-cadastro" id="segbutcad">
                     <Link to={"/FormAssinatura"}>
                     <button id='segbotao' >Próximo</button>

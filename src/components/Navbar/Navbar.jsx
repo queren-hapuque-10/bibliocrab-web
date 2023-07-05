@@ -44,7 +44,7 @@ const Navbar = () => {
   
 
             <li className='nav-item'>
-              <Link to = "/cadcliente" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><FaUserCircle size={28}/></Link>
+              <Link to = "/login" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><FaUserCircle size={28}/></Link>
             </li>
 
             <li className='nav-item'>
