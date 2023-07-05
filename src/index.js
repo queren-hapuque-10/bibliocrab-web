@@ -14,6 +14,7 @@ import Bk from './pages/Acervo/Usuario/Bk';
 import Adm from './pages/FormAdm/Adm';
 import Form from './pages/FormCadastro/Form';
 import Home from './pages/Home/Home';
+import Login from './pages/LoginCliente/Login';
 import Servicos from './pages/Servicos/Servicos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -29,6 +30,7 @@ root.render(
           <Route path='/services' element = {<Servicos/>}/>
           <Route path = "/cadcliente" element = {<Form/>}/>
           <Route path = "/cadadm" element = {<Adm/>}/>
+          <Route path = "/login" element = {<Login/>}/>
       </Routes>
     </BrowserRouter>
   </AppProvider>
