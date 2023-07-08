@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import crab from "../../images/crab.jpeg";
-import './CadAdm.css'
+import './CadAdm.css';
 
 function CadAdm (){
 	
@@ -16,7 +15,6 @@ const [rg, setRg] = useState();
 const [foneCel, setFoneCel] = useState();
 const [endereco, setEndereco] = useState();
 const [criarSenha, setCriarSenha] = useState();
-const[matricula,setMatricula] = useState();
 
 
 
@@ -35,7 +33,6 @@ const { state } = useLocation();
 	setFoneCel(response.data.foneCel)
 	setEndereco(response.data.endereco)
 	setCriarSenha(response.data.criarSenha)
-    setMatricula(response.data.matricula)
 
 
 		})
@@ -55,7 +52,6 @@ const { state } = useLocation();
 			foneCel:foneCel,
 			endereco:endereco,
 			criarSenha:criarSenha,
-            matricula:matricula
 		}
 
 		if (idCadastroadm != null) { //Alteração:
@@ -88,15 +84,16 @@ const { state } = useLocation();
     
 	
         return(
-
+         <div className="cad-adm">
             <>
-          <div className='crab-img'>
-    <img src = {crab} alt = "" />
-     </div>
+        
             <div class="form-cadastro" id="formcadastro">
          
                 <form action="#">
                 <p id="cad">Cadastrar-se</p>
+
+
+
                     <div class="input-cadastro" id="nomecad">
                         <label for="nome" id="nomelab">Nome Completo </label>
                         <input type="text" id="nome" placeholder="Digite o seu nome completo" 
@@ -104,15 +101,6 @@ const { state } = useLocation();
                         onChange={e => setNome(e.target.value)}
                         required/>
                     </div>
-
-                    <div class="input-cadastro" id="matriculacad">
-                        <label for="matricula" id="matriculalab">Matrícula </label>
-                        <input type="text" id="matricula" placeholder="Digite o seu número de matrícula" 
-                        value={matricula}
-                        onChange={e => setMatricula(e.target.value)}
-                        required/>
-                    </div>
-                   
     
                     <div class="input-cadastro" id="nasccad">
                         <label for="data"> Data de Nascimento </label>
@@ -172,7 +160,7 @@ const { state } = useLocation();
                             onChange={e => setCriarSenha(e.target.value)}
                             required/>
                         </div>
-                    
+                        <h1 id="log"> Já tem uma conta? <a href="/loginadm" id="link"> Login </a> </h1>
                         <div class="input-cadastro" id="primbutcad">
                         <Link to={"/"}>
                     <button id='primbotao'>Voltar</button>
@@ -180,8 +168,8 @@ const { state } = useLocation();
                     </div>
 
                     <div class="input-cadastro" id="segbutcad">
-                    <Link to={"/FormAssinatura"}>
-                    <button id='segbotao' >Próximo</button>
+                    <Link to={"/loginadm"}>
+                    <button id='segbotao' >Confirmar</button>
                     </Link>
                 </div>
     
@@ -193,6 +181,7 @@ const { state } = useLocation();
             </div>
         
                 </>
+                </div>
       );
 }
 	export default CadAdm;

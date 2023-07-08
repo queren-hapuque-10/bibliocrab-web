@@ -42,16 +42,13 @@ const Navbar = () => {
               <Link to = "/book" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>blog</Link>
             </li>
   
-
-            <li className='nav-item'>
-              <Link to = "/login" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><FaUserCircle size={28}/></Link>
-            </li>
-
             <li className='nav-item'>
               <Link to = "/cadadm" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'>Adm</Link>
             </li>
 
-                   
+            <li className='nav-item'>
+              <Link to = "/login" className='nav-link text-uppercase text-white fs-22 fw-6 ls-1'><FaUserCircle size={28}/></Link>
+            </li>
 
           </ul>
         </div>

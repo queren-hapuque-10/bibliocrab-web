@@ -1,15 +1,15 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
-import CadAdm from '../../components/FormAdm/CadAdm';
+import LoginCliente from '../../components/FormCliente/LoginCliente';
 import Navbar from '../../components/Navbar/Navbar';
-function Adm ()  {
+function LogCli ()  {
   return (
     <main>
     <Navbar/>
-    <CadAdm/>
+    <LoginCliente/>
     <Footer/>
     </main>
   )
 }
 
-export default Adm
+export default LogCli

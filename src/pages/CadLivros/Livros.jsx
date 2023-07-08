@@ -1,15 +1,15 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
-import LoginCliente from '../../components/FormCliente/LoginCliente';
 import Navbar from '../../components/Navbar/Navbar';
-function Login ()  {
+import CadLivros from '../../components/CadLivros/CadLivros';
+function Livros ()  {
   return (
     <main>
     <Navbar/>
-    <LoginCliente/>
+    <CadLivros/>
     <Footer/>
     </main>
   )
 }
 
-export default Login
+export default Livros

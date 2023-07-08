@@ -1,15 +1,15 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
-import CadAdm from '../../components/FormAdm/CadAdm';
 import Navbar from '../../components/Navbar/Navbar';
-function Adm ()  {
+import Assinatura from '../../components/FormCliente/Assinatura';
+function FormAssinatura ()  {
   return (
     <main>
     <Navbar/>
-    <CadAdm/>
+    <Assinatura/>
     <Footer/>
     </main>
   )
 }
 
-export default Adm
+export default FormAssinatura

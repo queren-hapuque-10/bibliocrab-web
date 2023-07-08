@@ -14,8 +14,11 @@ import Bk from './pages/Acervo/Usuario/Bk';
 import Adm from './pages/FormAdm/Adm';
 import Form from './pages/FormCadastro/Form';
 import Home from './pages/Home/Home';
-import Login from './pages/LoginCliente/Login';
+import LogAdm from './pages/LoginAdm/LogAdm';
 import Servicos from './pages/Servicos/Servicos';
+import LogCli from './pages/LoginCliente/LogCli';
+import FormAssinatura from './pages/FormAssinatura/FormAssinatura';
+import Livros from './pages/CadLivros/Livros';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -30,7 +33,10 @@ root.render(
           <Route path='/services' element = {<Servicos/>}/>
           <Route path = "/cadcliente" element = {<Form/>}/>
           <Route path = "/cadadm" element = {<Adm/>}/>
-          <Route path = "/login" element = {<Login/>}/>
+          <Route path = "/login" element = {<LogCli/>}/>
+          <Route path = "/loginadm" element = {<LogAdm/>}/>
+          <Route path = "/assinatura" element = {<FormAssinatura/>}/>
+          <Route path = "/cadlivros" element = {<Livros/>}/>
       </Routes>
     </BrowserRouter>
   </AppProvider>

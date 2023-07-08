@@ -165,7 +165,7 @@ const { state } = useLocation();
                     </div>
                     
                     <div class="input-cadastro" id="segbutcad">
-                    <Link to={"/FormAssinatura"}>
+                    <Link to={"/assinatura"}>
                     <button id='segbotao' >Próximo</button>
                     </Link>
                 </div>
