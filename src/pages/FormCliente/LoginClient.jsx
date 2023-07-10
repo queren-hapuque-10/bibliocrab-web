@@ -4,6 +4,7 @@ import LoginCliente from '../../components/FormCliente/LoginCliente';
 import Navbar from '../../components/Navbar/Navbar';
 
 function LoginClient ()  {
+
   return (
     <main>
     <Navbar/>
@@ -14,3 +15,5 @@ function LoginClient ()  {
 }
 
 export default LoginClient
+
+

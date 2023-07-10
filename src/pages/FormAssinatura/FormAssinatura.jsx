@@ -1,15 +1,15 @@
 import React from 'react';
 import Footer from '../../components/Footer/Footer';
 import Navbar from '../../components/Navbar/Navbar';
-import CadLivros from '../../components/CadLivros/CadLivros';
-function Livros ()  {
+import Assinatura from '../../components/FormCliente/Assinatura';
+function FormAssinatura ()  {
   return (
     <main>
     <Navbar/>
-    <CadLivros/>
+    <Assinatura/>
     <Footer/>
     </main>
   )
 }
 
-export default Livros
+export default FormAssinatura
