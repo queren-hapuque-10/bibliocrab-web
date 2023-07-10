@@ -11,7 +11,7 @@ import "./About.css";
 
 const About = () => {
   return (
-    <div>
+    <div className='cont-ab'>
 <section className='about'>
       <div className='container_about'>
       <div className='section-title'>
@@ -72,7 +72,7 @@ const About = () => {
             <section className='sobre-mais missao'>
             <div className='container'> 
                 <div className='sobre-mais-text'>
-                    <h3>Nossa Missão</h3>
+                    <h3 id='tit-missao'>Nossa Missão</h3>
                     <p>
               Nossa missão é dar constância às rotinas de leitura, 
               através de uma manutenção cronológica para proporcionar e manter uma eficiência aos leitores.

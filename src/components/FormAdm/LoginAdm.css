@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/*#nome,#data,#foneCel,#cpf,#rg,#endereco,#email,#criarSenha{
+    margin-bottom: 3%;
+    border-radius: 10px;
+    width: 97%;
+    height: 35px;
+    border: none;
+    color: black;
+    transition: all 0.4s ease;
+    padding: 5px;
+    margin-left: 1%;
+    outline: none;
+    font-size: 1.4rem;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgba(87, 94, 126, 0.829);
+    box-shadow: 1px 1px 3px wheat;
+outline: 1px solid #241E58;
+
+}
+
+#cpfcad,#celcad,#rgcad{
+    display: inline-block;
+}
+#cpf{
+    width: 115%;
+    margin-left: 25px;
+    margin-right:10px ;
+}
+
+#cpflab{
+    margin-left: 12%;
+}
+#foneCel{
+    width: 102%;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+#celab{
+    margin-left: 10px;
+}
+
+#rg{
+    width: 105%;
+    margin-left: 75px;
+}
+
+#rglab{
+    margin-left: 28%;
+}
+
+#emailcad,#senhacad{
+    display: inline-block;
+}
+
+#emailab{
+    margin-left: 10px;
+}
+
+#senhalab{
+margin-left: 37%;
+}
+#email{
+    width: 145%;
+    margin-right: 50px;
+    margin-left: 8px;
+}
+#criarSenha{
+    width: 100%;
+    margin-left: 150px;
+    margin-right: 10%;
+}
+
+input:hover{
+    background-color: #eeeeee75;
+}
+
+.input-cadastro label{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+font-weight: 500;
+margin-left: 1%;
+font-size: 13px;
+
+
+}
+
+
+
+
+#formcadastro{
+    z-index: 90;
+    width: 895px;
+    height: 590px;
+    background: linear-gradient(#241e58ab,#241e58),url(../../images/bg.jpeg)center/cover no-repeat;
+    border-radius: 10px;
+    box-sizing: border-box;
+    opacity: 0.9;
+    align-items: center;
+    margin-left: 17%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    box-shadow: 5px 7px 20px #241E58;
+}
+#primbotao{
+    background-color: #241E58;
+    color: white;
+    border: none;
+    font-family: 'Lato';
+    font-size: 20;
+    cursor: pointer;
+    padding: 3px 6px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 8px;
+    margin-right: 15%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 20%;
+    height: 50px;
+}
+#primbotao:hover,#segbotao:hover{
+    background-color: #eeeeee75;
+    color: white;
+}
+#segbotao{
+    color: white;
+    background-color: #241E58;
+    border: none;
+    font-family: 'Lato';
+    font-size: 20;
+    cursor: pointer;
+    padding: 4px 5px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    margin-left: 42%;
+    margin-top: 15px;
+    width: 20%;
+    height: 50px;
+}
+
+
+#primbutcad,#segbutcad{
+    display:inline;
+}
+
+#nome::placeholder,#data::placeholder,#foneCel::placeholder,#cpf::placeholder,#rg::placeholder,#endereco::placeholder,#email::placeholder,#criarSenha::placeholder{
+    font-size: 15px;
+    margin-left: 10%;
+    color: black;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cad{
+    text-align: center;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 3%;
+    font-size: 30px;
+    margin-top: 1%;
+}
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" );
+
+#email,#senha{
+    border-radius: 10px;
+    display: inline;
+    width: 90%;
+    height: 30px;
+    color: black;
+    padding: 10px;
+   /* margin-left: 5%;*/
+    outline: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: inherit;
+    background-color: rgba(255, 255, 255, 0.32);
+    outline: 1px solid red;
+}
+
+.log-adm{
+    background: linear-gradient( #d5dbf985 , #d5dbf996), url("../..//images/library.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:110%;
+    
+}
+
+.input-cadastro label{
+color: white;
+font-family: inherit;
+font-weight: 500;
+margin-left: 5%;
+font-size: 13px;
+}
+
+#formcadastro,.crab-img{
+    display: inline-block;
+}
+
+
+#formcadastro{
+    width: 400px;
+    height: auto;
+    background: linear-gradient(90deg,rgb(252, 21, 21),rgb(252, 93, 35)), url("../..//images/CANVASBIBLIOCRAB\ \(3\).jpg") center/cover no-repeat;/* rgb(0, 46, 93)*/;
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-top: 7%;
+}
+
+#primbotao{
+    background-color: red;
+    color: white;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1;
+    cursor: pointer;
+    padding: 3px 6px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+   /* margin-left: 25px;*/
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    width: 25%;
+    height: 30px;
+
+}
+#primbotao:hover{
+    background-color: white;
+    color: orangered;
+    transition: 0.5s;
+    opacity: 0.9;
+}
+#segbotao{
+    color: white;
+    background-color: orangered;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 4px 5px;
+    border-radius: 5px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+   /* margin-left: 35%;*/
+    width: 25%;
+    height: 30px;
+}
+
+#segbotao:hover{
+    background-color: white;
+    color: orangered;
+    transition: 0.5s;
+    opacity: 0.9;
+}
+
+#primbutcad,#segbutcad{
+    display:inline;
+}
+
+
+
+#email::placeholder,#senha::placeholder{
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.582);
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#cad{
+color: white;
+text-align: center;
+font-size: 25px;
+font-family: inherit;
+}
+
+#log{
+    font-size: 10px;
+    color:white;
+    margin-left: 6%;
+    margin-top: 2%;
+}
+
+#link{
+    color: rgba(255, 255, 255, 0.582);
+    font-size: 11px;
+    
+}
+
+
+@media (max-width:800px) and (min-width:0px) {
+    .crab-img{
+        display: none;
+    }
+
+    #formcadastro{
+        width: 250px;
+        height: auto;   
+     /*   margin-left: 50%;*/
+        margin-top: 15%;
+    }
+
+     
+
+    #cad{
+        font-size: 20px;
+    }
+
+    .input-cadastro label{
+        font-size: 10px;
+
+    }
+#primbotao{
+    width: 35%;  
+  margin-left: 6px;
+}
+
+#segbotao{
+   margin-left: 50px;
+    width: 35%;
+}  
+}
+
+@media (min-width:1025px) and (max-width:801px){
+    #formcadastro{
+        width: 300px;
+        height: auto;  
+        margin-top: 15%;
+    /*    margin-left: 10%; */
+    }
+    .crab-img{
+        width: 250px;
+        height: 200px;
+        transform: translateX(5%);
+        margin-bottom: 300px;
+    }
+
+}

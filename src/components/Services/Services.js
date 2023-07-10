@@ -12,10 +12,11 @@ import './Services.css';
 
 function Services(){
     return(
-<div>
+<div className='body-serv'>
 
-    {/*Planos e Assinaturas*/}
-    <section className='services'>
+    
+{/*Planos e Assinaturas*/}
+<section className='services'>
     <div className='container-planos' >
         <h3>Planos e Assinaturas</h3>
         <p>Pacotes de assinaturas disponíveis para o acesso à Bibliocrab!</p>
@@ -56,12 +57,11 @@ function Services(){
             </div>
             </div>
 </section>
- 
-{/*services
+{/**/}
 <section className='services'>
     <div className='container' >
         <h3>Por que escolher a Bibliocrab?</h3>
-        <p>Conheça as principais funcionalidades e benefícios que oferecemos!</p>
+        <p>Conheça as principais funcionalidades e benefícios que oferecemos!</p><br/>
         <div className='rows-cards'>
 
             <div className='row-card-item'>
@@ -129,7 +129,8 @@ function Services(){
 
         </div>
     </div>
-</section>*/}
+</section>
+
 
 </div>
 

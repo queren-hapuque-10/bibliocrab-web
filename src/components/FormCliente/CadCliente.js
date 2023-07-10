@@ -2,14 +2,18 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './CadCliente.css';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
+import {mensagemErro, notifyError, notifySuccess } from '../../components/util/Util';
 
 function CadCliente (){
 	
 const { state } = useLocation();
+
 const [idCliente, setIdCliente] = useState();
 const [nome, setNome] = useState();
 const [dataNascimento, setDataNascimento] = useState();
-const [email,setEmail] = useState();
+const [email, setEmail] = useState();
 const [cpf, setCpf] = useState();
 const [rg, setRg] = useState();
 const [celular, setCelular] = useState();
@@ -20,19 +24,18 @@ const [senha, setSenha] = useState();
    useEffect(() => {
 	
 	if (state != null && state.id != null) {
-	axios.get( "/cliente" + state.id)
+
+	axios.get("http://localhost:8082/cliente" + state.id)
     .then((response) => {
-	setIdCliente(response.data.idCliente)
+	setIdCliente(response.data.id)
     setNome(response.data.nome)
-	setDataNascimento(formatarData(response.data.dataNascimento))
+	setDataNascimento(response.data.dataNascimento)
     setEmail(response.data.email)
 	setCpf(response.data.cpf)
 	setRg(response.data.rg)
 	setCelular(response.data.celular)
 	setEndereco(response.data.endereco)
 	setSenha(response.data.senha)
-
-
 		})
 	}
    }, [state])
@@ -40,66 +43,51 @@ const [senha, setSenha] = useState();
 
 	function salvar () {
 
-		let cadastroRequest = {
+		let ClienteRequest = {
 
-			nome:nome,
-			dataNascimento:dataNascimento,
-            email:email,
-			cpf:cpf,
-			rg:rg,
-			celular:celular,
-			endereco:endereco,
-			senha:senha
+			nome: nome,
+			dataNascimento: dataNascimento,
+            email: email,
+			cpf: cpf,
+			rg: rg,
+			celular: celular,
+			endereco: endereco,
+			senha: senha
 		}
 
-	/*	if (idCliente != null) { //Alteração:
-			axios.put( "api/cadastro/" + idCliente, cadastroRequest)
-			.then((response) => { console.log('cadastro alterado com sucesso.') })
-			.catch((error) => { console.log('Erro ao alterar o cadastro.') })
-		} else { //Cadastro:
-			axios.post( "api/cadastro", cadastroRequest)
-			.then((response) => { console.log('Cadastrado com sucesso.') })
-			.catch((error) => { console.log('Erro ao incluir o cadastro.') })
-		} */
-
-        axios.post("http://localhost:8082/cliente", cadastroRequest)
-        .then((response) => { 
-            console.log('Cliente cadastrado com sucesso.') 
-            
-    })
-        .catch((error) => { console.log('Erro ao incluir o Cliente.') })  
-
-}  
-
-	function formatarData(dataParam) {
-
-        if (dataParam == null || dataParam == '') {
-            return ''
-        }
         
-        let dia = dataParam.substr(8,2);
-        let mes = dataParam.substr(5,2);
-        let ano = dataParam.substr(0,4);
-        let dataFormatada = dia + '/' + mes + '/' + ano;
+    	if (idCliente != null) { //Alteração:
 
-        return dataFormatada
-    }
-	
+			axios.put("http://localhost:8082/cliente" + idCliente, ClienteRequest)
+			.then((response) => { console.log('Dados alterados com sucesso.') })
+			.catch((error) => { console.log('Erro ao alterar.') })
+
+		} else { //Cadastro:
+			
+			axios.post("http://localhost:8082/cliente", ClienteRequest)
+			.then((response) => { notifySuccess('Cadastrado com sucesso!')		})
+			.catch((error) => { if (error.response) {
+				notifyError(error.response.data.errors[0].defaultMessage)
+				} else {
+				notifyError(mensagemErro)
+				} 
+				})
+		}  
+}  
         return(
 <>
+<ToastContainer/>
+
             <div className="cad-cliente">
-         {/*<div className='crab-img'>
-    <img src = {crab} alt = "" />
-     </div>*/} 
             <div class="form-cadastro" id="formcadastro">
          
-                <form action="#">
+                <form>
                 <p id="cad">Criar Conta</p>
                 
                     <div class="input-cadastro" id="nomecad">
                         <label for="nome" id="nomelab">Nome Completo </label>
                         <input type="text" id="nome" placeholder="Digite o seu nome completo" 
-                        value={nome}
+                        value={nome} 
                         onChange={e => setNome(e.target.value)}
                         />
                     </div>
@@ -114,7 +102,7 @@ const [senha, setSenha] = useState();
 
                     <div class="input-cadastro" id="celcad">
                             <label for="foneCel"id="celab">Celular</label>
-                            <input type="Celular" id="foneCel" placeholder="(99) 99999-9999" 
+                            <input type="celular" id="foneCel" placeholder="(99) 99999-9999" 
                             value={celular}
                             onChange={e => setCelular(e.target.value)}
                             required/>
@@ -148,7 +136,7 @@ const [senha, setSenha] = useState();
 
                         <div class="input-cadastro" id="emailcad">
                             <label for="email" id="emailab">E-mail</label>
-                            <input type="email" id="email" placeholder="Digite o seu email" 
+                            <input type="email" id="nome" placeholder="Digite o seu email" 
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             required/>
@@ -164,13 +152,13 @@ const [senha, setSenha] = useState();
                         </div>
                         <h1 id="log"> Já tem uma conta? <a href="/login" id="link"> Login </a> </h1>
                         <div class="input-cadastro" id="primbutcad">
-                        <Link to={"/"}>
-                    <button id='primbotao'>Voltar</button>
+                        <Link to={"/ajuda"}>
+                    <button id='primbotao'>Ajuda</button>
                     </Link>
                     </div>
                     
                     <div class="input-cadastro" id="segbutcad">
-                    <Link >
+                    <Link to={"/assinatura"} >
                     <button id='segbotao' onClick={() => salvar()}>Próximo</button>
                     </Link>
                 </div>

@@ -53,15 +53,17 @@ function Footer(){
     <ul class="footer-list">
         <li>
             <h3>Serviços</h3>
-        </li>
+        </li>        
         <li>
-            <a href="#" class="footer-link">Cronograma</a>
+            <a href="/services" class="footer-link">Assinaturas</a>
         </li>
+
         <li>
-            <a href="#" class="footer-link">Explore o Acervo</a>
+            <a href="/loginadm" class="footer-link">Administrador</a>
         </li>
+
         <li>
-            <a href="#" class="footer-link">Assinaturas</a>
+            <a href="/cadadm" class="footer-link">Ajuda</a>
         </li>
     </ul>
 

@@ -197,8 +197,7 @@ font-size: 13px;
     background: linear-gradient( #d5dbf99b , #d5dbf9e0), url("../..//images/CANVASBIBLIOCRAB\ \(2\).jpg") center/cover no-repeat;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;  
 }
 
 .input-cadastro label{
@@ -213,25 +212,21 @@ font-size: 13px;
     display: inline-block;
 }
 
-
-#formcadastro{
+.form-cadastro{
     width: 400px;
-    height: auto;
+    height: 460px;
     background: linear-gradient(90deg,rgb(252, 21, 21),rgb(252, 93, 35)), url("../..//images/CANVASBIBLIOCRAB\ \(3\).jpg") center/cover no-repeat;/* rgb(0, 46, 93)*/;
     border-radius: 10px;
     box-sizing: border-box;
-    transform: translateX(-50%);
     align-items: center;
     margin-bottom: 5%;
     margin-top: 7%;
-    margin-right: -5%;
 }
 
 #primbotao{
     background-color: red;
     color: white;
     border: none;
-    font-family: 'Poppins', sans-serif;
     font-size: 1;
     cursor: pointer;
     padding: 3px 6px;
@@ -243,7 +238,7 @@ font-size: 13px;
     letter-spacing: 1px;
     font-weight: 500;
     outline: none;
-    position: relative;
+   /* position: relative;*/
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
@@ -261,7 +256,6 @@ font-size: 13px;
     color: white;
     background-color: orangered;
     border: none;
-    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     cursor: pointer;
     padding: 4px 5px;
@@ -355,18 +349,18 @@ font-family: inherit;
 }
 
 @media (min-width:1025px) and (max-width:801px){
-    #formcadastro{
+   /*  #formcadastro{
         width: 300px;
         height: auto;  
         margin-top: 15%;
-    /*    margin-left: 10%; */
+       margin-left: 10%; 
     }
     .crab-img{
         width: 250px;
         height: 200px;
         transform: translateX(5%);
         margin-bottom: 300px;
-    }
+    }*/
 
 }
 

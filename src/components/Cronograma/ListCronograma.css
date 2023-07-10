@@ -1,0 +1,85 @@
+#btn-crono{
+    margin-top: 10px;
+}
+
+.table{
+   background: linear-gradient( #ffffffa0 , #ffffff8d), url("../..//images/35.jpg") center/cover no-repeat;
+   width: 100%;
+   text-align: center;
+   font-weight: bold;
+   margin-top: -30px;
+}
+.table th{
+    background-color: rgb(253, 142, 72);
+    color: aliceblue;
+    text-transform: uppercase;
+    width: 20px;
+    border-radius: 5px;
+}
+
+.table td{
+    font-weight: 500;
+     font-size: 15px;
+     background-color: rgba(253, 141, 72, 0.316);
+     padding: 5px 2px;
+     border-radius: 5px;
+    /* border-radius: 0 0 0 30px;*/
+}
+
+@media (max-width: 767px) {
+
+    
+    .table-responsive {
+      display: block;
+      position: relative;
+      width: 100%;
+    }
+    
+    .table-responsive thead,
+    .table-responsive tbody,
+    .table-responsive th,
+    .table-responsive td,
+    .table-responsive tr {
+      display: block;
+    }
+    
+    .table-responsive td,
+    .table-responsive th {
+      height: 35px;
+    }
+    
+    .table-responsive thead {
+      float: left;
+    }
+    
+    .table-responsive tbody {
+      width: auto;
+      position: relative;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      white-space: nowrap;
+    }
+
+    .table {
+        margin-top: -90px;
+    }
+    .table th{
+        background-color: rgb(253, 142, 72);
+        color: aliceblue;
+        text-transform: uppercase;
+        width: 110%;
+        border-radius: 8px 0  0 8px;
+        border-bottom: 2px solid #ffffff8d;
+        font-weight: 500;
+    }
+    
+    .table td{
+         font-weight: 500;
+         font-size: 15px;
+         background-color: rgba(253, 141, 72, 0.316);
+         padding: 5px 30px;
+         width: auto;
+         border-radius: 0 8px 8px 0;
+         border-bottom: 2px solid #ffffff8d;
+    }
+}

@@ -177,121 +177,89 @@ font-size: 13px;
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&display=swap" );
 
-.form-cadastro input{
+#formcadastro{
+    width: 400px;
+    height: auto;
+    background: linear-gradient(90deg,rgb(252, 21, 21),rgb(252, 93, 35)), url("../..//images/CANVASBIBLIOCRAB\ \(3\).jpg") center/cover no-repeat;/* rgb(0, 46, 93)*/;
+    border-radius: 10px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 5%;
+    margin-top: 7%;
+    margin-right: -5%;
+}
+
+#nome,#data,#foneCel,#cpf,#rg,#endereco,#criarSenha{
     border-radius: 10px;
     display: inline;
     width: 90%;
     height: 30px;
     color: black;
     padding: 10px;
-    margin-left: 5%;
-    outline: none;
-    border: none;
+   /* margin-left: 5%;*/
     font-size: 1.2rem;
     font-family: inherit;
     background-color: rgba(255, 255, 255, 0.32);
-    outline: 1px solid red;
+    border: 1px solid rgb(255, 185, 185);
 }
 
-.input-cadastro label{
+.cad-adm{
+    background: linear-gradient( #d5dbf99b , #d5dbf9e0), url("../..//images/library.jpg") center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .input-cadastro label{
     color: white;
     font-family: inherit;
-font-weight: 500;
-margin-left: 5%;
-font-size: 13px;
-
-
-}
-
-#formcadastro,.crab-img{
-    display: inline-block;
-}
-
-
-#formcadastro{
-    padding: 15px;
-    z-index: 90;
-    width: 400px;
-    height: auto;
-    background: linear-gradient(90deg,rgba(255, 0, 0, 0.850),rgba(255, 68, 0, 0.850)); /* rgb(0, 46, 93)*/;
-    border-radius: 10px;
-    box-sizing: border-box;
-    transform: translateX(-50%);
-    align-items: center;
-    margin-left: 24%;
-    margin-bottom: 1%;
-    margin-top: 7%;
-}
-
-#primbotao{
-    background-color: red;
-    color: white;
-    border: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1;
-    cursor: pointer;
-    padding: 3px 6px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-    margin-left: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
     font-weight: 500;
-    outline: none;
-    position: relative;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    width: 25%;
-    height: 30px;
+    margin-left: 5%;
+    font-size: 13px;
+    }
 
+
+#btnadmconf{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
 }
-#primbotao:hover{
-    background-color: white;
+
+#admconf{
+
     color: orangered;
-    transition: 0.5s;
-    opacity: 0.9;
-}
-#segbotao{
-    color: white;
-    background-color: orangered;
-    border: none;
-    font-family: 'Poppins', sans-serif;
+    background-color: rgb(255, 237, 205);
+    border: 1px outset rgb(255, 255, 255);
+
     font-size: 12px;
     cursor: pointer;
-    padding: 4px 5px;
-    border-radius: 5px;
-    display: inline-block;
+
+    border-radius: 15px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
     outline: none;
-    position: relative;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    transition: all 0.3s;
-    margin-left: 35%;
-    width: 25%;
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+    width: 40%;
     height: 30px;
+    transition: 0.3s;
 }
 
-#segbotao:hover{
-    background-color: white;
-    color: orangered;
-    transition: 0.5s;
+#admconf:hover{
+    background-color: rgb(255, 81, 0);
+    color: rgb(255, 255, 255);
     opacity: 0.9;
-}
-
-#primbutcad,#segbutcad{
-    display:inline;
 }
 
 #icon{
     color: white;
 }
 
-.form-cadastro input::placeholder{
+#nome::placeholder,#data::placeholder,#foneCel::placeholder,#cpf::placeholder,#rg::placeholder,#endereco::placeholder,#email::placeholder,#criarSenha::placeholder{
     font-size: 1.2rem;
     color: rgba(255, 255, 255, 0.582);
     font-weight: 600;
@@ -302,13 +270,6 @@ font-size: 13px;
     color: rgba(255, 255, 255, 0.582);
 }
 
-.crab-img{
-    width: 25%;
-    height: 25%;
-    transform: translateX(15%);
-    margin-bottom: 430px;
-}
-
 #cad{
 color: white;
 text-align: center;
@@ -316,22 +277,31 @@ font-size: 25px;
 font-family: inherit;
 }
 
-@media (max-width:800px) and (min-width:0px) {
-    .crab-img{
-        display: none;
-    }
+#log{
+    font-size: 10px;
+    color:white;
+    margin-left: 6%;
+    margin-top: 2%;
+}
 
+#link{
+    color: rgba(255, 255, 255, 0.582);
+    font-size: 11px;
+    
+}
+
+
+@media (max-width:800px) and (min-width:0px) {
     #formcadastro{
-        width: 250px;
+        width: 300px;
         height: auto;   
-        margin-left: 50%;
+     /*   margin-left: 50%;*/
         margin-top: 15%;
     }
 
     #nome,#data,#foneCel,#cpf,#rg,#endereco,#email,#criarSenha{
         width: 90%;
         height: 10px;
-
     }  
 
     #cad{
@@ -342,30 +312,9 @@ font-family: inherit;
         font-size: 10px;
 
     }
-#primbotao{
-    width: 35%;  
-    margin-left: 6px;
-}
 
-#segbotao{
-    margin-left: 50px;
-    width: 35%;
-}  
-}
-
-@media (max-width:1025px) and (min-width:801px){
-    #formcadastro{
-        width: 300px;
-        height: auto;  
-        margin-top: 15%;
-        margin-left: 20%;
+  #admconf{
+        width: 55%;
     }
-    .crab-img{
-        width: 250px;
-        height: 200px;
-        transform: translateX(5%);
-        margin-bottom: 300px;
-    }
-
+  
 }
-

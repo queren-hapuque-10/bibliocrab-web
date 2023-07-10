@@ -1,15 +1,18 @@
 .header-content{
     min-height: 75vh;
-    background: linear-gradient(#98ab69c3, #2a1fa5d0), url("../../images/raizes.jpeg") center/cover no-repeat;
+    background: linear-gradient(#8ce1f672, #141045c0), url("../../images/raizes.jpeg") center/cover no-repeat;
     flex-direction: column;
 }
+/*#98ab69c3, #2a1fa5d0*/
 .header-title{
     font-size: 4.2rem;
-    color: rgb(253, 252, 255);
+    text-transform: uppercase;
+    color: rgb(240, 248, 255);
 }
 .header-text{
     margin-top: -1.8rem;
     margin-bottom: 2.8rem;
     opacity: 0.8;
     max-width: 770px;
+    font-weight: 400;
 }

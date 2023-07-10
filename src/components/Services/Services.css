@@ -7,11 +7,14 @@
     }
 
 .services .rows-cards-planos{
-    background-color: #d5dbf9;
+    background: linear-gradient( #cbe3f8a0 , #c9f1fc8d), url("../..//images/34.jpg") center/cover no-repeat;
     display: flex;
     justify-content: center;
     margin-top: 20px;
     flex-wrap: wrap;
+    padding: 30px 0;
+    margin-bottom: -20px;
+  
 }
 .services .row-card-item-plano{
     background-color: #ffffff;
@@ -21,7 +24,8 @@
     margin: 20px;
     transition: 0.3s;
     text-align: center;
-    font-size: 17px;
+    font-size: 17px;  
+    border: 1px solid #b5c0d5;
 }
 .preco{
     margin-top: 15px;
@@ -44,8 +48,8 @@
     background-color: rgb(11, 11, 101);
 }
 .services .row-card-item-plano img{
-    background-color: #ff6c28;
-    border-radius: 14px;
+    background: linear-gradient( #cbe3f8a0 , #c9f1fc8d), url("../..//images/34.jpg") center/cover no-repeat;
+    border-radius: 30px;
     width: 100px;
     padding: 9px;
     transition: 0.3s;
@@ -55,3 +59,5 @@
     font-size: 20px;
     margin-top: 15px;
 }
+
+

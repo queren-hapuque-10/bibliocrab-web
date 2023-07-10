@@ -107,25 +107,30 @@
 }
 
 .newslatter{
-    background: linear-gradient(#ffffffb0, #74915B), url("../../images/raizes.jpeg") center/cover no-repeat;
+    background: linear-gradient(#d6ebbd82, #8369aa72), url("../../images/34.jpg") center/cover no-repeat;
     flex-direction: column;
     padding: 25px 0;
-    color: #241E58;
+    color: #241e58e9;
     border-radius: 4px;
     font-size: 15px;
     text-align: center;
 }
 #input_group_news input {
     all: unset;
-    padding: 7px 18px;
-    background-color: #b3ca9e;
+    padding: 7px 20px;
+    background-color: #3282898c;
     border-radius: 4px 0px 0px 4px;
 }
-#input_group_news ::placeholder{
-    float: left;
-    color: #241E58;
-}
 
+#input_group_news #email::placeholder{
+    float: left;
+    color: #e7e7e7;
+    font-size: 15px;
+    font-weight: 300;
+}
+#subscribe-news p{
+    font-weight: 550;
+}
 #input_group_news button {
     background-color: #241E58;
     border: none;
@@ -261,7 +266,8 @@ transition: 0.4s;
 
 .blog h4{
     margin-top: -5px;
-    background-color: #241E58;
+    background-color: #40397a;
+    background: linear-gradient(#8ce1f672, #141045c0), url("../../images/34.jpg") center/cover no-repeat;
     padding: 3px;
     border-radius: 0;
     color: #f7ffe1;
@@ -286,8 +292,8 @@ transition: 0.4s;
     flex-wrap: wrap;
 }
 .blog .card-item-blog{
-    /*background: linear-gradient(#e1f2ff, hsla(222, 100%, 79%, 0.956));*/
-    border: 1px solid #241E58;
+    background: linear-gradient(#d0f4a400, #b1abe733), url("../../images/35.jpg") center/cover no-repeat;
+    border: 2px solid #c1bde494;
     margin: 15px;
     border-radius: 7px;
     text-align: center;
@@ -303,10 +309,10 @@ transition: 0.4s;
 }
 
 .blog .card-item-blog:hover{
-    background-color: rgb(224, 222, 255);
+    background-color: #d5d4e4;
 }
 .card-item-blog button{
-    background-color: #241E58;
+    background-color: #40397a;
     padding: 5px 23px;
     border-radius: 5px;
     color: rgb(255, 255, 255);
@@ -314,6 +320,6 @@ transition: 0.4s;
     transition: 0.3s;
 }
 .card-item-blog button:hover{
-    background-color: #4c42a2;
+    background-color: #ff6b30;
 }
 
