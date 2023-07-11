@@ -2,6 +2,13 @@
     margin-top: 10px;
 }
 
+#livro{
+  background-color: rgb(6, 54, 185);
+}
+
+#acoes{
+  background-color: orangered;
+}
 .table{
    background: linear-gradient( #ffffffa0 , #ffffff8d), url("../..//images/35.jpg") center/cover no-repeat;
    width: 100%;

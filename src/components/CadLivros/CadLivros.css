@@ -7,6 +7,10 @@
     background: linear-gradient( #ebecf551 , #f1f3fb44), url("../..//images/library.jpg") center/cover no-repeat;
 }
 
+#view{
+   background-color: rgba(167, 178, 238, 0.554);
+   
+}
 .container-livro{
     width: 100%;
     max-width: 650px;
@@ -86,7 +90,7 @@
 }
 
 .form-submit-btn input:hover{
-    background: rgb(36, 57, 133);
+    background: rgb(249, 76, 28);
     color: rgb(255, 255, 255);
     border: 1px solid ;
 }

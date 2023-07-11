@@ -184,7 +184,7 @@ font-size: 13px;
     height: 30px;
     color: black;
     padding: 10px;
-   margin-left: 5%;
+    margin-left: 5%;
     outline: none;
     border: none;
     font-size: 1.2rem;
@@ -198,6 +198,7 @@ font-size: 13px;
     display: flex;
     justify-content: center;
     align-items: center;  
+    height: 75vh;
 }
 
 .input-cadastro label{
@@ -213,14 +214,14 @@ font-size: 13px;
 }
 
 .form-cadastro{
-    width: 400px;
-    height: 460px;
+    width: 500px;
+    height: 560px;
     background: linear-gradient(90deg,rgb(252, 21, 21),rgb(252, 93, 35)), url("../..//images/CANVASBIBLIOCRAB\ \(3\).jpg") center/cover no-repeat;/* rgb(0, 46, 93)*/;
     border-radius: 10px;
     box-sizing: border-box;
     align-items: center;
     margin-bottom: 5%;
-    margin-top: 7%;
+    margin-top: 5%;
 }
 
 #primbotao{
@@ -244,14 +245,16 @@ font-size: 13px;
     transition: all 0.3s;
     width: 25%;
     height: 30px;
-
+    margin-bottom: 10px;
 }
+
 #primbotao:hover{
     background-color: white;
     color: orangered;
     transition: 0.5s;
     opacity: 0.9;
 }
+
 #segbotao{
     color: white;
     background-color: orangered;

@@ -120,17 +120,15 @@ const [senha, setSenha] = useState();
 
                          <div class="input-cadastro" id="rgcad">
                             <label for="rg" id="rglab">RG</label>
-                            <input type="rg" id="rg" placeholder="99.999.999-99" 
+                            <input type="rg" id="rg" placeholder="99.999.999" 
                             value={rg}
                             onChange={e => setRg(e.target.value)}
                             required/>
                         </div>
 
-                        
-
                          <div class="input-cadastro" id="endcad">
                             <label for="endereco" id="endlab">Endereço</label>
-                            <input type="endereco" id="endereco" placeholder="Digite o seu endereço" 
+                            <input type="endereco" id="endereco" placeholder="Cidade, UF, Rua - Bairro" 
                             value={endereco}
                             onChange={e => setEndereco(e.target.value)}
                             required/>
@@ -147,7 +145,7 @@ const [senha, setSenha] = useState();
 
                          <div class="input-cadastro" id="senhacad">
                             <label for="criarSenha" id="senhalab">Criar Senha</label>
-                            <input type="senha" id="criarSenha" placeholder="EX:12345678" 
+                            <input type="password" id="criarSenha" placeholder="Criar senha" 
                             value={senha}
                             onChange={e => setSenha(e.target.value)}
                             required/>
@@ -160,7 +158,7 @@ const [senha, setSenha] = useState();
                     </div>
                     
                     <div class="input-cadastro" id="segbutcad">
-                 { /* <Link to={"/assinatura"}> </Link>  */}
+                   { /* <Link to={"/assinatura"}> </Link>  */}
                     <button id='segbotao' onClick={() => salvar()}>Cadastrar</button>
                    
                 </div>

@@ -1,12 +1,12 @@
-import React from "react";
 import axios from "axios";
-import {mensagemErro, notifyError, notifySuccess } from '../../components/util/Util';
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Button, Container, Divider, Form, Icon } from 'semantic-ui-react';
+import React, { useEffect, useState } from "react";
+import { useLocation, Link } from "react-router-dom";
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { Form } from 'semantic-ui-react';
+import { mensagemErro, notifyError, notifySuccess } from '../../components/util/Util';
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
 
 export default function FormCronograma () {
 
@@ -81,136 +81,108 @@ export default function FormCronograma () {
 	return(
 		<div>
 			 <Navbar />
-<ToastContainer/>
-			<div style={{marginTop: '3%'}}>
 
-				<Container textAlign='justified' >
+< div className="body-livro" id="body-crono">
+   <ToastContainer/>     
+            <div class="container-livro">
+      <h1 class="form-title">Cadastre seu Cronograma</h1>
+      <Form>
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Livro</label>
+            <input type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Livro a acompanhar"
+                    value={livro}
+					onChange={e => setLivro(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="username">Domingo</label>
+            <input type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Páginas a ler"
+                    value={domingo}
+					onChange={e => setDomingo(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="email">Segunda</label>
+            <input type="text"
+                    id="phonenumber"
+                    name="email"
+                    placeholder="Páginas a ler"
+                    value={segunda}
+					onChange={e => setSegunda(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="phoneNumber">Terça</label>
+            <input type="text"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="Páginas a ler"
+                    value={terca}
+					onChange={e => setTerca(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="password">Quarta</label>
+            <input type="text"
+                    id="password"
+                    name="number"
+                    placeholder="Páginas a ler"
+                    value={quarta}
+					onChange={e => setQuarta(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="confirmPassword">Quinta</label>
+            <input type="text"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Páginas a ler"
+                    value={quinta}
+					onChange={e => setQuinta(e.target.value)}
+                    />
+          </div>
 
-					{ idCronograma === undefined &&
-						<h2> <span style={{color: 'darkgray'}}> Cronograma &nbsp;<Icon name='angle double right' size="small" /> </span> Cadastro</h2>
-					}
-					{ idCronograma != undefined &&
-						<h2> <span style={{color: 'darkgray'}}> Cronograma &nbsp;<Icon name='angle double right' size="small" /> </span> Alteração</h2>
-					}
-					<Divider />
+		  <div class="user-input-box">
+            <label for="confirmPassword">Sexta</label>
+            <input type="text"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Páginas a ler"
+                    value={sexta}
+					onChange={e => setSexta(e.target.value)}
+                    />
+          </div>
 
-					<div style={{marginTop: '4%'}}>
+		  <div class="user-input-box">
+            <label for="confirmPassword">Sábado</label>
+            <input type="text"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Páginas a ler"
+                    value={sabado}
+					onChange={e => setSabado(e.target.value)}
+                    />
+          </div>
 
-						<Form style={{textAlign:'center'}}>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Cadastrar Cronograma" 	onClick={() => salvar()}/>
+		  <Link to="/perfil">
+			<input type="submit" value="Visualizar Cronograma" id="view"/>
+		  </Link>
+        </div>
+      </Form>
 
-							<Form.Group widths='equal'>
-
-								<Form.Input
-									required
-									fluid
-									label='Livro'
-									maxLength="100"
-									value={livro}
-									onChange={e => setLivro(e.target.value)}
-								/>
-
-								<Form.Input
-									fluid
-									label='Segunda'
-										value={segunda}
-										onChange={e => setSegunda(e.target.value)}
-									/> 
-
-                                <Form.Input
-									fluid
-									label='Terça'
-									width={6}
-										value={terca}
-										onChange={e => setTerca(e.target.value)}
-									/> 
-                                    
-                                    <Form.Input
-									required
-									fluid
-									label='Quarta'
-									maxLength="100"
-									value={quarta}
-									onChange={e => setQuarta(e.target.value)}
-								/>
-
-                                <Form.Input
-									fluid
-									label='Quinta'
-										value={quinta}
-										onChange={e => setQuinta(e.target.value)}
-									/> 
-
-                            </Form.Group>
-                           
-
-                            <Form.Group widths='equal'>
-
-                                <Form.Input
-									fluid
-									label='Sexta'
-									width={6}
-										value={sexta}
-										onChange={e => setSexta(e.target.value)}
-									/> 
-                                    
-                                    <Form.Input
-									required
-									fluid
-									label='Sábado'
-									maxLength="100"
-									value={sabado}
-									onChange={e => setSabado(e.target.value)}
-								/>
-
-                                    <Form.Input
-									required
-									fluid
-									label='Domingo'
-									maxLength="100"
-									value={domingo}
-									onChange={e => setDomingo(e.target.value)}
-								/>
-
-
-							</Form.Group>
-
-							<Form.Group widths='equal' style={{marginTop: '4%'}}  className='form--empresa-salvar'>
-
-								<Button
-									type="button"
-									inverted
-									circular
-									icon
-									labelPosition='left'
-									color='orange'
-								>
-									<Icon name='reply' />
-									<Link to={'/list-Cronograma'}>Voltar</Link>
-								</Button>
-
-								<Container textAlign='right'>
-									
-									<Button
-										inverted
-										circular
-										icon
-										labelPosition='left'
-										color='blue'
-										floated='right'
-										onClick={() => salvar()}
-									>
-										<Icon name='save' />
-										Salvar
-									</Button>
-									
-								</Container>
-
-							</Form.Group>
-
-						</Form>
-					</div>
-				</Container>
-			</div>
+    </div>
+        </div>
+		<Footer/>
 		</div>
 	)
                 }

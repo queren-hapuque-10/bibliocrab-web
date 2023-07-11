@@ -138,7 +138,7 @@
 
 
 #manguetown{
-    background: linear-gradient( #1a336584 , #1a336584 ), url("../..//images/34.jpg") center/cover no-repeat;
+    background: linear-gradient( #4075de84 , #1a336584 ), url("../..//images/34.jpg") center/cover no-repeat;
     height: 28.3rem;
     font-weight: 700;
     display: flex;
@@ -149,7 +149,7 @@
     color: rgb(249, 252, 255);
 }
 #crab-leitores{
-    background: linear-gradient( #1a336584 , #1a336584 ), url("../../images/35.jpg") center/cover no-repeat;
+    background: linear-gradient( #c6d6f7a4, #212dac93), url("../../images/raizes.jpeg") center/cover no-repeat;
     height: 20.3rem;
     font-weight: 700;
     display: flex;
@@ -182,7 +182,7 @@
 
 
 .propostas .card-item-context{
-    background: linear-gradient(#1a33653b, #1a336532), url("../..//images/34.jpg") center/cover no-repeat;
+    background: linear-gradient(#91b2f557, #628ada32), url("../..//images/34.jpg") center/cover no-repeat;
     margin: 15px;
     border-radius: 14px;
     text-align: center;

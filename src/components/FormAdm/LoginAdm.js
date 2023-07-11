@@ -71,7 +71,7 @@ const { state } = useLocation();
             <div class="form-cadastro" id="formcadastro">
          
                 <form action="#">
-                <p id="cad">Login</p>
+                <p id="cad">LOGIN</p>
           
                         <div class="input-cadastro" id="emailcad">
                             <label for="email" id="emailab">E-mail</label>
@@ -83,8 +83,8 @@ const { state } = useLocation();
         
 
                          <div class="input-cadastro" id="senhacad">
-                            <label for="senha" id="senhalab">Criar Senha</label>
-                            <input type="senha" id="senha" placeholder="EX:12345678" 
+                            <label for="senha" id="senhalab">Senha</label>
+                            <input type="senha" id="senha" placeholder="Digite a sua senha" 
                             value={senha}
                             onChange={e => setSenha(e.target.value)}
                             required/>
@@ -98,7 +98,7 @@ const { state } = useLocation();
                     
                     <div class="input-cadastro" id="segbutcad">
                     <Link to={"/cadlivros"}>
-                    <button id='segbotao' >Entrar</button>
+                    <button id='segbotao'>Entrar</button>
                     </Link>
                 </div>
     

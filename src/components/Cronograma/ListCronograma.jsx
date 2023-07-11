@@ -11,8 +11,6 @@ class ListCronograma extends React.Component{
     state = {
 
         listaCronograma: [],
-        openModal: false,
-        idRemover: null,
       
     }
 
@@ -34,29 +32,15 @@ class ListCronograma extends React.Component{
 
     };
 
-    confirmaRemover = (id) => {
-
-        this.setState({
-            openModal: true,
-            idRemover: id
-        })  
-    }
-
-    setOpenModal = (val) => {
-
-        this.setState({
-            openModal: val
-        })
-   
-    };
 
 
-    remover = async () => {
 
-        await axios.delete('http://localhost:8082/cronograma/' + this.state.idRemover)
+    remover = async (id) => {
+        console.log(id);
+
+        await axios.delete('http://localhost:8082/cronograma/' + id)
         .then((response) => {
    
-            this.setState({ openModal: false })
             console.log('Listagem removida com sucesso.')
    
             axios.get("http://localhost:8082/cronograma/")
@@ -68,7 +52,6 @@ class ListCronograma extends React.Component{
             })
         })
         .catch((error) => {
-            this.setState({  openModal: false })
             console.log('Erro ao remover o cronograma.')
         })
     };
@@ -97,7 +80,7 @@ class ListCronograma extends React.Component{
 
                                 <Table.Header>
                                     <Table.Row>
-                                        <Table.HeaderCell>Livro</Table.HeaderCell>
+                                        <Table.HeaderCell id="livro">Livro</Table.HeaderCell>
                                         <Table.HeaderCell>Domingo</Table.HeaderCell>
                                         <Table.HeaderCell>Segunda</Table.HeaderCell>
                                         <Table.HeaderCell>Terça</Table.HeaderCell>
@@ -106,7 +89,7 @@ class ListCronograma extends React.Component{
                                         <Table.HeaderCell>Sexta</Table.HeaderCell>
                                         <Table.HeaderCell>Sábado</Table.HeaderCell>
 
-                                        <Table.HeaderCell width={2}>Ações</Table.HeaderCell>
+                                        <Table.HeaderCell width={2} id="acoes"> Ações</Table.HeaderCell>
                                     </Table.Row>
                                 </Table.Header>
                           
@@ -139,7 +122,7 @@ class ListCronograma extends React.Component{
                                                    circular
                                                    style={{color: 'red'}}
                                                    title='Clique aqui para remover as tarefas da semana' 
-                                                   onClick={e => this.confirmaRemover(c.id)}
+                                                   onClick={e => this.remover(c.id)}
                                                    ><HiTrash/></Button>
 
                                             </Table.Cell>
@@ -151,7 +134,6 @@ class ListCronograma extends React.Component{
                        </div>
                    </Container>
                </div>
-
                 
            </div>
        )

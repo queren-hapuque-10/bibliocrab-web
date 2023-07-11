@@ -118,7 +118,7 @@ const { state } = useLocation();
 
                          <div class="input-cadastro" id="rgcad">
                             <label for="rg" id="rglab">RG</label>
-                            <input type="rg" id="rg" placeholder="99.999.999-99" 
+                            <input type="rg" id="rg" placeholder="99.999.999" 
                             value={rg}
                             onChange={e => setRg(e.target.value)}
                             required/>
@@ -150,7 +150,7 @@ const { state } = useLocation();
     
                          <div class="input-cadastro" id="senhacad">
                             <label for="criarSenha" id="senhalab">Criar Senha</label>
-                            <input type="password" id="criarSenha" placeholder="EX:12345678" 
+                            <input type="password" id="criarSenha" placeholder="Crie uma senha" 
                             value={senha}
                             onChange={e => setSenha(e.target.value)}
                             required/>
