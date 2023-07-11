@@ -107,7 +107,7 @@
 }
 
 .newslatter{
-    background: linear-gradient(#d6ebbd82, #8369aa72), url("../../images/34.jpg") center/cover no-repeat;
+    background: linear-gradient(#c6d6f765, #03720372), url("../../images/34.jpg") center/cover no-repeat;
     flex-direction: column;
     padding: 25px 0;
     color: #241e58e9;
@@ -115,11 +115,13 @@
     font-size: 15px;
     text-align: center;
 }
+
 #input_group_news input {
     all: unset;
-    padding: 7px 20px;
-    background-color: #3282898c;
+    padding: 6px 20px;
+    background-color: #02850272;
     border-radius: 4px 0px 0px 4px;
+    border: 1px solid;
 }
 
 #input_group_news #email::placeholder{
@@ -128,9 +130,11 @@
     font-size: 15px;
     font-weight: 300;
 }
+
 #subscribe-news p{
     font-weight: 550;
 }
+
 #input_group_news button {
     background-color: #241E58;
     border: none;
@@ -267,7 +271,7 @@ transition: 0.4s;
 .blog h4{
     margin-top: -5px;
     background-color: #40397a;
-    background: linear-gradient(#8ce1f672, #141045c0), url("../../images/34.jpg") center/cover no-repeat;
+    background: linear-gradient(#110875c0, #141045c0), url("../../images/34.jpg") center/cover no-repeat;
     padding: 3px;
     border-radius: 0;
     color: #f7ffe1;
@@ -292,7 +296,6 @@ transition: 0.4s;
     flex-wrap: wrap;
 }
 .blog .card-item-blog{
-    background: linear-gradient(#d0f4a400, #b1abe733), url("../../images/35.jpg") center/cover no-repeat;
     border: 2px solid #c1bde494;
     margin: 15px;
     border-radius: 7px;

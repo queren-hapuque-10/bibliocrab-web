@@ -152,25 +152,6 @@ class ListCronograma extends React.Component{
                    </Container>
                </div>
 
-               <Modal
-                    basic
-                    onClose={() => this.setOpenModal(false)}
-                    onOpen={() => this.setOpenModal(true)}
-                    open={this.state.openModal}
-                >
-                    <Header icon>
-                        <HiTrash/>
-                        <div style={{marginTop: '5%'}}> Tem certeza que deseja remover esse registro? </div>
-                    </Header>
-                    <Modal.Actions>
-                        <Button basic color='red' inverted onClick={() => this.setOpenModal(false)}>
-                            <Icon name='remove' /> Não
-                        </Button>
-                        <Button color='green' inverted onClick={() => this.remover()}>
-                            <Icon name='checkmark' /> Sim
-                        </Button>
-                    </Modal.Actions>
-                </Modal>
                 
            </div>
        )

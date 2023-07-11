@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { Form } from 'semantic-ui-react';
 import './CadCliente.css';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
@@ -19,7 +20,6 @@ const [rg, setRg] = useState();
 const [celular, setCelular] = useState();
 const [endereco, setEndereco] = useState();
 const [senha, setSenha] = useState();
-
 
    useEffect(() => {
 	
@@ -58,13 +58,13 @@ const [senha, setSenha] = useState();
         
     	if (idCliente != null) { //Alteração:
 
-			axios.put("http://localhost:8082/cliente" + idCliente, ClienteRequest)
+			axios.put("http://localhost:8082/cliente/" + idCliente, ClienteRequest)
 			.then((response) => { console.log('Dados alterados com sucesso.') })
 			.catch((error) => { console.log('Erro ao alterar.') })
 
 		} else { //Cadastro:
 			
-			axios.post("http://localhost:8082/cliente", ClienteRequest)
+			axios.post("http://localhost:8082/cliente/", ClienteRequest)
 			.then((response) => { notifySuccess('Cadastrado com sucesso!')		})
 			.catch((error) => { if (error.response) {
 				notifyError(error.response.data.errors[0].defaultMessage)
@@ -74,14 +74,16 @@ const [senha, setSenha] = useState();
 				})
 		}  
 }  
-        return(
+        return( 
+            
 <>
 <ToastContainer/>
 
-            <div className="cad-cliente">
+          
+ <div className="cad-cliente">
             <div class="form-cadastro" id="formcadastro">
          
-                <form>
+                <Form >
                 <p id="cad">Criar Conta</p>
                 
                     <div class="input-cadastro" id="nomecad">
@@ -158,14 +160,14 @@ const [senha, setSenha] = useState();
                     </div>
                     
                     <div class="input-cadastro" id="segbutcad">
-                    <Link to={"/assinatura"} >
-                    <button id='segbotao' onClick={() => salvar()}>Próximo</button>
-                    </Link>
+                 { /* <Link to={"/assinatura"}> </Link>  */}
+                    <button id='segbotao' onClick={() => salvar()}>Cadastrar</button>
+                   
                 </div>
     
-                </form>
+                </Form>
             </div>
-            </div>
+            </div> 
         </>
             
       );

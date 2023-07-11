@@ -21,6 +21,7 @@ import FormAssinatura from './pages/FormCliente/FormAssinatura';
 import Livros from './pages/CadLivros/Livros';
 import LoginClient from './pages/FormCliente/LoginClient';
 import LoginAdmin from './pages/FormAdm/AdmLog';
+import CadLivros from './components/CadLivros/CadLivros';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -40,7 +41,7 @@ root.render(
           <Route path = '/list-cronograma' element = {<ListCronograma/>}/>
           <Route path = "/loginadm" element = {<LoginAdmin/>}/>
           <Route path = "/assinatura" element = {<FormAssinatura/>}/>
-          <Route path = "/cadlivro" element = {<Livros/>}/>
+          <Route path = "/cadlivros" element = {<Livros/>}/>
       </Routes>
     </BrowserRouter>
   </AppProvider>
