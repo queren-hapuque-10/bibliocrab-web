@@ -50,7 +50,7 @@ export default function Hm() {
 
 
 <section className='services'>
-    <div className='container'>
+    <div className='container' id='cont-serv'>
         <h3>Por que escolher a Bibliocrab?</h3>
         <p>Conheça as principais funcionalidades e benefícios que oferecemos!</p>
         <div className='rows-cards'>

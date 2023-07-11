@@ -198,7 +198,11 @@ font-size: 13px;
     display: flex;
     justify-content: center;
     align-items: center;  
+<<<<<<< HEAD
     height: 75vh;
+=======
+    height: 600px;
+>>>>>>> b99130efac7318384ffcf13e616fcf892dcb00ce
 }
 
 .input-cadastro label{
@@ -220,8 +224,14 @@ font-size: 13px;
     border-radius: 10px;
     box-sizing: border-box;
     align-items: center;
+<<<<<<< HEAD
     margin-bottom: 5%;
     margin-top: 5%;
+=======
+ /*   margin-bottom: 5%;
+    margin-top: 7%;*/
+    padding-bottom: 20px;
+>>>>>>> b99130efac7318384ffcf13e616fcf892dcb00ce
 }
 
 #primbotao{
@@ -245,7 +255,12 @@ font-size: 13px;
     transition: all 0.3s;
     width: 25%;
     height: 30px;
+<<<<<<< HEAD
     margin-bottom: 10px;
+=======
+    margin-bottom: 20px;
+
+>>>>>>> b99130efac7318384ffcf13e616fcf892dcb00ce
 }
 
 #primbotao:hover{
@@ -352,7 +367,7 @@ font-family: inherit;
 }
 
 @media (min-width:1025px) and (max-width:801px){
-   /*  #formcadastro{
+     #formcadastro{
         width: 300px;
         height: auto;  
         margin-top: 15%;
@@ -363,7 +378,7 @@ font-family: inherit;
         height: 200px;
         transform: translateX(5%);
         margin-bottom: 300px;
-    }*/
+    }
 
 }
 

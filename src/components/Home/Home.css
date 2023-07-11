@@ -207,6 +207,9 @@
 
 /*servicea*/
 
+#cont-serv{
+    max-width: 1500px;
+}
 .services{
     background-color: #ffffff;
     padding: 50px 0;

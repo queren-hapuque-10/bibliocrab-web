@@ -78,7 +78,8 @@ const { state } = useLocation();
                         </div>
                         <h1 id="log"> Não tem uma conta? <a href="/cadcliente" id="link"> Cadastre-se </a> </h1>
                         <div class="input-cadastro" id="primbutcad">
-                        <Link to={"/"}>
+                      
+                <Link to={"/"}>
                     <button id='primbotao'>Voltar</button>
                     </Link>
                     </div>

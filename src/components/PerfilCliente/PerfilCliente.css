@@ -9,6 +9,7 @@
 
 .section-perfil-usuario .perfil-usuario-header {
     width: 100%;
+    max-width: 1700px;
     display: flex;
     justify-content: center;
     background: linear-gradient(#fba06f18, transparent);

@@ -18,31 +18,28 @@ import { render } from "@testing-library/react";
 
 
 class PerfilCliente extends React.Component{
-
+/*
     state = {
 
-        listaCliente: []
+        listaCliente: [],
+        cliente: null
       
     }
 
     componentDidMount = () => {
-      
-        this.carregarLista();
-      
-    }
+        let idCliente=1
 
-    carregarLista = () => {
-
-        axios.get("http://localhost:8082/cliente/")
+        console.log(idCliente)
+      
+        axios.get("http://localhost:8082/cliente/"+idCliente)
         .then((response) => {
-          
+            console.log(response)
             this.setState({
-               listaCliente: response.data
+               cliente: response.data
             })
-        })
-
-    };
-
+        })  
+    }
+*/
     render(){
     return(
         <div className="cont-perfil"> 
@@ -62,7 +59,7 @@ class PerfilCliente extends React.Component{
     </div>
     <div class="perfil-usuario-body">
         <div class="perfil-usuario-bio">
-            <h3 class="titulo">Crabiana Recife da Silva</h3>
+            <h3 class="titulo">{/*{this.state.cliente.nome}*/} Nome</h3>
             <p class="texto">Leitora Eclética, adoro Romances!!</p>
         </div>
         <div class="perfil-usuario-footer">
