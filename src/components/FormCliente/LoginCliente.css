@@ -184,7 +184,7 @@ font-size: 13px;
     height: 30px;
     color: black;
     padding: 10px;
-   /* margin-left: 5%;*/
+    margin-left: 5%;
     outline: none;
     border: none;
     font-size: 1.2rem;
@@ -198,6 +198,7 @@ font-size: 13px;
     display: flex;
     justify-content: center;
     align-items: center;  
+    height: 600px;
 }
 
 .input-cadastro label{
@@ -219,8 +220,9 @@ font-size: 13px;
     border-radius: 10px;
     box-sizing: border-box;
     align-items: center;
-    margin-bottom: 5%;
-    margin-top: 7%;
+ /*   margin-bottom: 5%;
+    margin-top: 7%;*/
+    padding-bottom: 20px;
 }
 
 #primbotao{
@@ -233,17 +235,18 @@ font-size: 13px;
     border-radius: 5px;
     display: inline-block;
     margin-top: 20px;
-   /* margin-left: 25px;*/
+    margin-left: 25px;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 500;
     outline: none;
-   /* position: relative;*/
+    position: relative;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
     width: 25%;
     height: 30px;
+    margin-bottom: 20px;
 
 }
 #primbotao:hover{
@@ -269,7 +272,7 @@ font-size: 13px;
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-   /* margin-left: 35%;*/
+    margin-left: 35%;
     width: 25%;
     height: 30px;
 }
@@ -349,7 +352,7 @@ font-family: inherit;
 }
 
 @media (min-width:1025px) and (max-width:801px){
-   /*  #formcadastro{
+     #formcadastro{
         width: 300px;
         height: auto;  
         margin-top: 15%;
@@ -360,7 +363,7 @@ font-family: inherit;
         height: 200px;
         transform: translateX(5%);
         margin-bottom: 300px;
-    }*/
+    }
 
 }
 

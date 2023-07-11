@@ -47,21 +47,6 @@ const { state } = useLocation();
 		}
  
 	}
-
-	function formatarData(dataParam) {
-
-        if (dataParam == null || dataParam == '') {
-            return ''
-        }
-        
-        let dia = dataParam.substr(8,2);
-        let mes = dataParam.substr(5,2);
-        let ano = dataParam.substr(0,4);
-        let dataFormatada = dia + '/' + mes + '/' + ano;
-
-        return dataFormatada
-    }
-	
         return(
 
             <div className="log-adm">
@@ -74,21 +59,21 @@ const { state } = useLocation();
                 <p id="cad">Login</p>
           
                         <div class="input-cadastro" id="emailcad">
-                            <label for="email" id="emailab">E-mail</label>
-                            <input type="email" id="email" placeholder="Digite o seu email" 
+                            <label for="email" id="emailab">Matrícula</label>
+                            <input type="text" id="email" placeholder="Digite o seu email" 
                             value={email}
                             onChange={e => setEmail(e.target.value)}
                             required/>
                         </div>
         
-
                          <div class="input-cadastro" id="senhacad">
-                            <label for="senha" id="senhalab">Criar Senha</label>
-                            <input type="senha" id="senha" placeholder="EX:12345678" 
+                            <label for="senha" id="senhalab">Senha</label>
+                            <input type="password" id="senha" placeholder="Digite a sua senha" 
                             value={senha}
                             onChange={e => setSenha(e.target.value)}
                             required/>
                         </div>
+
                         <h1 id="log"> Não tem uma conta? <a href="/cadadm" id="link"> Cadastro </a> </h1>
                         <div class="input-cadastro" id="primbutcad">
                         <Link to={"/cadadm"}>
@@ -98,7 +83,7 @@ const { state } = useLocation();
                     
                     <div class="input-cadastro" id="segbutcad">
                     <Link to={"/cadlivros"}>
-                    <button id='segbotao' >Entrar</button>
+                    <button id='segbotao'>Entrar</button>
                     </Link>
                 </div>
     

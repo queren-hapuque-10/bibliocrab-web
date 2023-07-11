@@ -11,8 +11,6 @@ class ListCronograma extends React.Component{
     state = {
 
         listaCronograma: [],
-        openModal: false,
-        idRemover: null,
       
     }
 
@@ -34,29 +32,15 @@ class ListCronograma extends React.Component{
 
     };
 
-    confirmaRemover = (id) => {
-
-        this.setState({
-            openModal: true,
-            idRemover: id
-        })  
-    }
-
-    setOpenModal = (val) => {
-
-        this.setState({
-            openModal: val
-        })
-   
-    };
 
 
-    remover = async () => {
 
-        await axios.delete('http://localhost:8082/cronograma/' + this.state.idRemover)
+    remover = async (id) => {
+        console.log(id);
+
+        await axios.delete('http://localhost:8082/cronograma/' + id)
         .then((response) => {
    
-            this.setState({ openModal: false })
             console.log('Listagem removida com sucesso.')
    
             axios.get("http://localhost:8082/cronograma/")
@@ -68,7 +52,6 @@ class ListCronograma extends React.Component{
             })
         })
         .catch((error) => {
-            this.setState({  openModal: false })
             console.log('Erro ao remover o cronograma.')
         })
     };
@@ -139,7 +122,7 @@ class ListCronograma extends React.Component{
                                                    circular
                                                    style={{color: 'red'}}
                                                    title='Clique aqui para remover as tarefas da semana' 
-                                                   onClick={e => this.confirmaRemover(c.id)}
+                                                   onClick={e => this.remover(c.id)}
                                                    ><HiTrash/></Button>
 
                                             </Table.Cell>
@@ -151,26 +134,6 @@ class ListCronograma extends React.Component{
                        </div>
                    </Container>
                </div>
-
-               <Modal
-                    basic
-                    onClose={() => this.setOpenModal(false)}
-                    onOpen={() => this.setOpenModal(true)}
-                    open={this.state.openModal}
-                >
-                    <Header icon>
-                        <HiTrash/>
-                        <div style={{marginTop: '5%'}}> Tem certeza que deseja remover esse registro? </div>
-                    </Header>
-                    <Modal.Actions>
-                        <Button basic color='red' inverted onClick={() => this.setOpenModal(false)}>
-                            <Icon name='remove' /> Não
-                        </Button>
-                        <Button color='green' inverted onClick={() => this.remover()}>
-                            <Icon name='checkmark' /> Sim
-                        </Button>
-                    </Modal.Actions>
-                </Modal>
                 
            </div>
        )

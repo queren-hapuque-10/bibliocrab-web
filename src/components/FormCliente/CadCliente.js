@@ -152,14 +152,14 @@ const [senha, setSenha] = useState();
                         </div>
                         <h1 id="log"> Já tem uma conta? <a href="/login" id="link"> Login </a> </h1>
                         <div class="input-cadastro" id="primbutcad">
-                        <Link to={"/ajuda"}>
-                    <button id='primbotao'>Ajuda</button>
+                        <Link to={"/login"}>
+                    <button id='primbotao'>Login</button>
                     </Link>
                     </div>
                     
                     <div class="input-cadastro" id="segbutcad">
                     <Link to={"/assinatura"} >
-                    <button id='segbotao' onClick={() => salvar()}>Próximo</button>
+                    <button id='segbotao' onClick={() => salvar()}>Salvar</button>
                     </Link>
                 </div>
     

@@ -203,6 +203,9 @@
 
 /*servicea*/
 
+#cont-serv{
+    max-width: 1500px;
+}
 .services{
     background-color: #ffffff;
     padding: 50px 0;
@@ -292,7 +295,6 @@ transition: 0.4s;
     flex-wrap: wrap;
 }
 .blog .card-item-blog{
-    background: linear-gradient(#d0f4a400, #b1abe733), url("../../images/35.jpg") center/cover no-repeat;
     border: 2px solid #c1bde494;
     margin: 15px;
     border-radius: 7px;
