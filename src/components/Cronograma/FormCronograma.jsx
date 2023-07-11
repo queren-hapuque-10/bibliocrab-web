@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import {mensagemErro, notifyError, notifySuccess } from '../../components/util/Util';
 import { useEffect, useState } from "react";
-//import InputMask from 'react-input-mask';
 import { Link, useLocation } from "react-router-dom";
 import { Button, Container, Divider, Form, Icon } from 'semantic-ui-react';
 import { ToastContainer } from 'react-toastify';

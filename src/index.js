@@ -40,7 +40,7 @@ root.render(
           <Route path = '/list-cronograma' element = {<ListCronograma/>}/>
           <Route path = "/loginadm" element = {<AdmLog/>}/>
           <Route path = "/assinatura" element = {<FormAssinatura/>}/>
-          <Route path = "/cadlivro" element = {<Livros/>}/>
+          <Route path = "/cadlivros" element = {<Livros/>}/>
       </Routes>
     </BrowserRouter>
   </AppProvider>

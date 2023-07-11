@@ -2,23 +2,25 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './CadLivros.css';
+import {mensagemErro, notifyError, notifySuccess } from '../../components/util/Util';
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 function CadLivros (){
 	
-
-	const [idCadastrolivros, setIdCadastrolivros] = useState();
+const [idCadastrolivros, setIdCadastrolivros] = useState();
 const [imagem, setImagem] = useState();
 const [titulo, setTitulo] = useState();
 const [sinopse,setSinopse] = useState();
 const [qtdpag, setQtdpag] = useState();
 const [autor, setAutor] = useState();
-const [lacamento, setLancamento] = useState();
+const [lancamento, setLancamento] = useState();
 
 const { state } = useLocation();
    useEffect(() => {
 	
 	if (state != null && state.id != null) {
-	axios.get("http://localhost:8082/cadlivros" + state.id)
+	axios.get("http://localhost:8082/livro/" + state.id)
     .then((response) => {
 	setIdCadastrolivros(response.data.id)
     setImagem(response.data.imagem)
@@ -26,7 +28,7 @@ const { state } = useLocation();
 	setSinopse(response.data.sinopse)
 	setQtdpag(response.data.qtdpag)
     setAutor(response.data.autor)
-	setLancamento(response.data.lacamento)
+	setLancamento(response.data.lancamento)
 
 		})
 	}
@@ -42,104 +44,102 @@ const { state } = useLocation();
             sinopse:sinopse,
 			qtdpag:qtdpag,
             autor:autor,
-			lacamento:lacamento,
+			lancamento:lancamento,
 		}
 
 		if (idCadastrolivros != null) { //Alteração:
-			axios.put( "http://localhost:8082/cadlivros" + idCadastrolivros, cadastrolivrosRequest)
+			axios.put( "http://localhost:8082/livro/" + idCadastrolivros, cadastrolivrosRequest)
 			.then((response) => { console.log('livro alterado com sucesso.') })
 			.catch((error) => { console.log('Erro ao alterar o cadastro.') })
 		} else { //Cadastro:
-			axios.post( "http://localhost:8082/cadlivros", cadastrolivrosRequest)
-			.then((response) => { console.log('Livro cadastrado com sucesso.') })
-			.catch((error) => { console.log('Erro ao incluir o cadastro.') })
-		}
+			axios.post( "http://localhost:8082/livro/", cadastrolivrosRequest)
+			.then((response) => { notifySuccess('Livro cadastrado com sucesso.')		})
+			.catch((error) => { if (error.response) {
+				notifyError(error.response.data.errors[0].defaultMessage)
+				} else {
+				notifyError(mensagemErro)
+				} 
+				})
+		}  
  
 	}
 	 
         return(
-            <div className="cad-livros">
-            <>
-            <div class="form-cadastro" id="formcadastro">
-
-         
-         
-                <form action="#">
-                <p id="cad">Cadastrar Livro</p>
-
-                <div class="input-imagem" id="imgcad">
-                    <label class="picture" tabIndex="0">Imagem
-                    <input type="url" id="homepage" name="homepage" placeholder="Adicione o link da imagem"
-                     value={imagem}
-                     onChange={e => setImagem(e.target.value)}
-                     required/>
-
-                    </label>
-                    </div>
-
-                    <div class="input-cadastro" id="titcad">
-                        <label for="titulo" id="titlab">Título</label>
-                        <input type="text" id="titulo" placeholder="Digite o título do livro" 
-                        value={titulo}
-                        onChange={e => setTitulo(e.target.value)}
-                        required/>
-                    </div>
-
-                    <div class="input-cadastro" id="sinopsecad">
-                        <label for="sinopse" id="sinopselab">Sinopse </label>
-                        <input type="text" id="sinopse" placeholder="Digite a sinopse do livro" 
-                        value={sinopse}
-                        onChange={e => setSinopse(e.target.value)}
-                        required/>
-                    </div>
-                   
-
-                    <div class="input-cadastro" id="pagcad">
-                            <label for="qtdoag"id="paglab">Quantidade de páginas</label>
-                            <input type="quantidade" id="pag" placeholder="Digite a quantidade de páginas"
-                            value={qtdpag}
-                            onChange={e => setQtdpag(e.target.value)}
-                            required/>
-                        </div>
-                   
-                        <div class="input-cadastro" id="autorcad">
-                            <label for="autor" id="autorlab">Autor</label>
-                            <input type="autor" id="autor" placeholder="Digite o autor do livro" 
-                            value={autor}
-                            onChange={e => setAutor(e.target.value)}
-                            required/>
-                        </div>
-
-                        <div class="input-cadastro" id="pagcad">
-                        <label for="data">Data de Lançamento</label>
-                        <input type="date" name="data" id="data"
-                        value={lacamento}
-                        onChange={e => setLancamento(e.target.value)}
-                        />
-                       </div>
-                        
-                        <div class="input-cadastro" id="primbutcad">
-                        <Link to={"/"}>
-                    <button id='primbotao'>Voltar</button>
-                    </Link>
-                    </div>
-
-                    <div class="input-cadastro" id="segbutcad">
-                    <Link to={"/FormAssinatura"}>
-                    <button id='segbotao' >Próximo</button>
-                    </Link>
-                </div>
-    
-    
-    
-                   
-    
-                </form>
-            </div>
-        
-                </>
-                </div>
-      );
+        < div className="body-livro">
+            <ToastContainer/>
+            <div class="container-livro">
+      <h1 class="form-title">Cadastro de Livros</h1>
+      <form action="#">
+        <div class="main-user-info">
+          <div class="user-input-box">
+            <label for="fullName">Título</label>
+            <input type="text"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Título do livro"
+                    value={titulo}
+					onChange={e => setTitulo(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="username">Autor</label>
+            <input type="text"
+                    id="username"
+                    name="username"
+                    placeholder="Autor do livro"
+                    value={autor}
+					onChange={e => setAutor(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="email">Sinopse</label>
+            <input type="text"
+                    id="phonenumber"
+                    name="email"
+                    placeholder="Sinopse do livro"
+                    value={sinopse}
+					onChange={e => setSinopse(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="phoneNumber">Imagem</label>
+            <input type="url"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    placeholder="URL da imagem"
+                    value={imagem}
+					onChange={e => setImagem(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="password">Páginas</label>
+            <input type="number"
+                    id="password"
+                    name="number"
+                    placeholder="Quantidade de Páginas"
+                    value={qtdpag}
+					onChange={e => setQtdpag(e.target.value)}
+                    />
+          </div>
+          <div class="user-input-box">
+            <label for="confirmPassword">Lançamento</label>
+            <input type="date"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    placeholder="Data de lançamento"
+                    value={lancamento}
+					onChange={e => setLancamento(e.target.value)}
+                    
+                    />
+          </div>
+        </div>
+        <div class="form-submit-btn">
+          <input type="submit" value="Cadastrar Livro" 	onClick={() => salvar()}/>
+        </div>
+      </form>
+    </div>
+        </div>
+      )
 }
 
 	export default CadLivros;

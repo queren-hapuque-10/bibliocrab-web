@@ -31,6 +31,7 @@ function Services(){
                Você terá acesso à todos os recursos e funcionalidades da Bibliocrab por <center><b>1 mês!</b> </center>
                 </p>
                 <a href="/cadcliente"><button className="assinar">Assine agora</button></a>
+                
             </div>
 
 
