@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import './CadLivros.css';
+import { Form } from 'semantic-ui-react';
 import {mensagemErro, notifyError, notifySuccess } from '../../components/util/Util';
 import { ToastContainer } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
@@ -28,29 +29,47 @@ const { state } = useLocation();
 	setSinopse(response.data.sinopse)
 	setQtdpag(response.data.qtdpag)
     setAutor(response.data.autor)
-	setLancamento(response.data.lancamento)
+	setLancamento(formatarData(response.data.lancamento))
 
 		})
 	}
    }, [state])
 
+   function formatarData(dataParam) {
+
+    if (dataParam == null || dataParam == '') {
+        return ''
+    }
+    
+    let dia = dataParam.substr(8,2);
+    let mes = dataParam.substr(5,2);
+    let ano = dataParam.substr(0,4);
+    let dataFormatada = dia + '/' + mes + '/' + ano;
+
+    return dataFormatada
+}
 
 	function salvar () {
 
 		let cadastrolivrosRequest = {
-
 			imagem:imagem,
 			titulo:titulo,
-            sinopse:sinopse,
+      sinopse:sinopse,
 			qtdpag:qtdpag,
-            autor:autor,
+      autor:autor,
 			lancamento:lancamento,
 		}
 
 		if (idCadastrolivros != null) { //Alteração:
 			axios.put( "http://localhost:8082/livro/" + idCadastrolivros, cadastrolivrosRequest)
-			.then((response) => { console.log('livro alterado com sucesso.') })
-			.catch((error) => { console.log('Erro ao alterar o cadastro.') })
+      .then((response) => { notifySuccess('Livro alterado com sucesso.')		})
+			.catch((error) => { if (error.response) {
+				notifyError(error.response.data.errors[0].defaultMessage)
+				} else {
+				notifyError(mensagemErro)
+				} 
+				})
+
 		} else { //Cadastro:
 			axios.post( "http://localhost:8082/livro/", cadastrolivrosRequest)
 			.then((response) => { notifySuccess('Livro cadastrado com sucesso.')		})
@@ -69,7 +88,7 @@ const { state } = useLocation();
             <ToastContainer/>
             <div class="container-livro">
       <h1 class="form-title">Cadastro de Livros</h1>
-      <form action="#">
+      <Form>
         <div class="main-user-info">
           <div class="user-input-box">
             <label for="fullName">Título</label>
@@ -121,11 +140,11 @@ const { state } = useLocation();
 					onChange={e => setQtdpag(e.target.value)}
                     />
           </div>
+
           <div class="user-input-box">
-            <label for="confirmPassword">Lançamento</label>
-            <input type="date"
+            <label for="dtLancamento">Lançamento</label>
+            <input type="text"
                     id="confirmPassword"
-                    name="confirmPassword"
                     placeholder="Data de lançamento"
                     value={lancamento}
 					onChange={e => setLancamento(e.target.value)}
@@ -133,10 +152,17 @@ const { state } = useLocation();
                     />
           </div>
         </div>
+
         <div class="form-submit-btn">
           <input type="submit" value="Cadastrar Livro" 	onClick={() => salvar()}/>
+
+          <Link to="/livros">
+			<input type="submit" value="Visualizar os Livros" id="view"/>
+		  </Link>
+
         </div>
-      </form>
+        
+      </Form>
     </div>
         </div>
       )

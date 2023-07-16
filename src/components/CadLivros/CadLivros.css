@@ -1,10 +1,10 @@
 .body-livro{
     display: flex;
-    height: 100vh;
+    height: 120vh;
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background: linear-gradient( #ebecf551 , #f1f3fb44), url("../..//images/library.jpg") center/cover no-repeat;
+    background: linear-gradient( #ffffff85 , #5d5f6800), url("../..//images/CANVASBIBLIOCRAB\ \(3\).jpg") center/cover no-repeat;
 }
 
 #view{
@@ -14,11 +14,12 @@
 .container-livro{
     width: 100%;
     max-width: 650px;
-    background: rgba(243, 150, 114, 0.664);
+    background: #f9492acb;
     padding: 28px;
     margin: 0 28px;
     border-radius: 10px;
     box-shadow: inset -2px 2px 2px white;
+    
 }
 
 .form-title{
@@ -27,7 +28,7 @@
     text-align: center;
     padding-bottom: 6px;
     color: white;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 2px 2px rgb(16, 2, 70);
     border-bottom: solid 1px white;
 }
 
@@ -62,7 +63,7 @@
     width: 95%;
     border-radius: 20px;
     outline: none;
-    border: 1px solid rgb(255, 153, 0);
+    border: 1px solid rgb(255, 0, 0);
     padding: 0 10px;
 }
 
@@ -83,14 +84,14 @@
     border:none;
     border-radius: 3px;
     color: rgb(255, 255, 255);
-    background: rgba(255, 115, 0, 0.645);
+    background: #ff2b05da;
     border-radius: 20px;
     border: 1px solid ;
     transition: 0.3s;
 }
 
 .form-submit-btn input:hover{
-    background: rgb(249, 76, 28);
+    background: rgba(24, 44, 128, 0.661);
     color: rgb(255, 255, 255);
     border: 1px solid ;
 }

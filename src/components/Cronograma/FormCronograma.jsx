@@ -12,11 +12,11 @@ export default function FormCronograma () {
 
 	const { state } = useLocation();
 
-	const [idCronograma, setIdCronograma] = useState();
-	const [livro, setLivro] = useState();
-	const [domingo, setDomingo] = useState();
-	const [segunda, setSegunda] = useState();
-	const [terca, setTerca] = useState();
+    const [idCronograma, setIdCronograma] = useState();
+    const [livro, setLivro] = useState();
+    const [domingo, setDomingo] = useState();
+    const [segunda, setSegunda] = useState();
+    const [terca, setTerca] = useState();
     const [quarta, setQuarta] = useState();
     const [quinta, setQuinta] = useState();
     const [sexta, setSexta] = useState();

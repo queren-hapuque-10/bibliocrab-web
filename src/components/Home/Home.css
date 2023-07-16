@@ -298,6 +298,7 @@ transition: 0.4s;
     display: flex;
     flex-wrap: wrap;
 }
+
 .blog .card-item-blog{
     border: 2px solid #c1bde494;
     margin: 15px;

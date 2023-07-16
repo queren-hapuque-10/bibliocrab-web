@@ -158,15 +158,9 @@ const [senha, setSenha] = useState();
                     </div>
                     
                     <div class="input-cadastro" id="segbutcad">
-<<<<<<< HEAD
-                   { /* <Link to={"/assinatura"}> </Link>  */}
-                    <button id='segbotao' onClick={() => salvar()}>Cadastrar</button>
-                   
-=======
                     <Link to={"/assinatura"} >
                     <button id='segbotao' onClick={() => salvar()}>Salvar</button>
                     </Link>
->>>>>>> b99130efac7318384ffcf13e616fcf892dcb00ce
                 </div>
     
                 </Form>
