@@ -9,13 +9,13 @@ import "react-toastify/dist/ReactToastify.css";
 
 function CadLivros (){
 	
-const [idCadastrolivros, setIdCadastrolivros] = useState();
-const [imagem, setImagem] = useState();
-const [titulo, setTitulo] = useState();
-const [sinopse,setSinopse] = useState();
-const [qtdpag, setQtdpag] = useState();
-const [autor, setAutor] = useState();
-const [lancamento, setLancamento] = useState();
+    const [idCadastrolivros, setIdCadastrolivros] = useState();
+    const [imagem, setImagem] = useState();
+    const [titulo, setTitulo] = useState();
+    const [sinopse,setSinopse] = useState();
+    const [qtdpag, setQtdpag] = useState();
+    const [autor, setAutor] = useState();
+    const [lancamento, setLancamento] = useState();
 
 const { state } = useLocation();
    useEffect(() => {
@@ -23,13 +23,13 @@ const { state } = useLocation();
 	if (state != null && state.id != null) {
 	axios.get("http://localhost:8082/livro/" + state.id)
     .then((response) => {
-	setIdCadastrolivros(response.data.id)
+	  setIdCadastrolivros(response.data.id)
     setImagem(response.data.imagem)
     setTitulo(response.data.titulo)
-	setSinopse(response.data.sinopse)
-	setQtdpag(response.data.qtdpag)
+	  setSinopse(response.data.sinopse)
+	  setQtdpag(response.data.qtdpag)
     setAutor(response.data.autor)
-	setLancamento(formatarData(response.data.lancamento))
+	  setLancamento(formatarData(response.data.lancamento))
 
 		})
 	}
@@ -83,11 +83,13 @@ const { state } = useLocation();
  
 	}
 	 
-        return(
-        < div className="body-livro">
+      return(
+      < div className="body-livro">
+
             <ToastContainer/>
-            <div class="container-livro">
-      <h1 class="form-title">Cadastro de Livros</h1>
+      
+      <div class="container-livro">
+      <h2 class="form-title">Cadastro de Livros</h2>
       <Form>
         <div class="main-user-info">
           <div class="user-input-box">
@@ -97,9 +99,10 @@ const { state } = useLocation();
                     name="fullName"
                     placeholder="Título do livro"
                     value={titulo}
-					onChange={e => setTitulo(e.target.value)}
-                    />
+					          onChange={e => setTitulo(e.target.value)}
+            />
           </div>
+
           <div class="user-input-box">
             <label for="username">Autor</label>
             <input type="text"
@@ -110,9 +113,10 @@ const { state } = useLocation();
 					onChange={e => setAutor(e.target.value)}
                     />
           </div>
+
           <div class="user-input-box">
             <label for="email">Sinopse</label>
-            <input type="text"
+            <input type="textarea"
                     id="phonenumber"
                     name="email"
                     placeholder="Sinopse do livro"
@@ -156,7 +160,7 @@ const { state } = useLocation();
         <div class="form-submit-btn">
           <input type="submit" value="Cadastrar Livro" 	onClick={() => salvar()}/>
 
-          <Link to="/livros">
+          <Link to="/livroslist">
 			<input type="submit" value="Visualizar os Livros" id="view"/>
 		  </Link>
 

@@ -1,34 +1,34 @@
 .body-livro{
     display: flex;
-    height: 120vh;
+    height: 115vh;
     justify-content: center;
     align-items: center;
     background-size: cover;
-    background: linear-gradient( #ffffff85 , #5d5f6800), url("../..//images/CANVASBIBLIOCRAB\ \(3\).jpg") center/cover no-repeat;
+    background: linear-gradient( #d5dbf985 , #d5dbf996), url("../..//images/CANVASBIBLIOCRAB\ \(2\).jpg") center/cover no-repeat;
 }
 
 #view{
-   background-color: rgba(167, 178, 238, 0.554);
+   background-color: rgba(21, 19, 136, 0.774);
    
 }
 .container-livro{
     width: 100%;
-    max-width: 650px;
-    background: #f9492acb;
+    max-width: 700px;
+    background: linear-gradient( #9ba6cf6e , #b4bbdd70), url("../..//images/arranjo-de-livros-com-espaco-de-copia.jpg") center/cover no-repeat;
     padding: 28px;
     margin: 0 28px;
     border-radius: 10px;
-    box-shadow: inset -2px 2px 2px white;
+    box-shadow: inset -2px 2px 2px rgb(255, 255, 255);
     
 }
 
 .form-title{
     font-size: 26px;
-    font-weight: 600;
+   font-weight: 500;
     text-align: center;
     padding-bottom: 6px;
     color: white;
-    text-shadow: 2px 2px 2px rgb(16, 2, 70);
+   text-shadow: 2px 2px 2px rgba(16, 2, 70, 0.398);
     border-bottom: solid 1px white;
 }
 
@@ -61,11 +61,13 @@
 .user-input-box input{
     height: 40px;
     width: 95%;
-    border-radius: 20px;
+    border-radius: 15px;
     outline: none;
-    border: 1px solid rgb(255, 0, 0);
+    border: 1px solid #2a38f9cb;
     padding: 0 10px;
+    background-color: rgba(255, 255, 255, 0.898);
 }
+
 
 .form-submit-btn input{
     cursor: pointer;
@@ -84,7 +86,7 @@
     border:none;
     border-radius: 3px;
     color: rgb(255, 255, 255);
-    background: #ff2b05da;
+    background: #fc4a2ada;
     border-radius: 20px;
     border: 1px solid ;
     transition: 0.3s;

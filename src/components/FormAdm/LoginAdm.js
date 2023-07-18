@@ -50,13 +50,11 @@ const { state } = useLocation();
         return(
 
             <div className="log-adm">
-         {/*<div className='crab-img'>
-    <img src = {crab} alt = "" />
-     </div>*/} 
+  
             <div class="form-cadastro" id="formcadastro">
          
                 <form action="#">
-                <p id="cad">LOGIN</p>
+                <p id="cad">ADM</p>
           
                         <div class="input-cadastro" id="emailcad">
                             <label for="email" id="emailab">Matrícula</label>

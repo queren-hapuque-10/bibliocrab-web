@@ -1,70 +1,57 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './LoginCliente.css';
+import { registerSuccessfulLoginForJwt } from "../util/AuthenticationService";
+import { notifyError } from "../util/Util";
+import { ToastContainer } from "react-toastify";
+import { Form } from 'semantic-ui-react';
 
 function LoginCliente (){
 	
+    const navigate = useNavigate();
 
-const [idLogin, setIdLogin] = useState();
-const [email,setEmail] = useState();
-const [senha, setSenha] = useState();
+    const [username, setUsername] = useState('');
+    const [senha, setSenha] = useState('');
 
+    function entrar() {
+        
+        if (username !== '' && senha !== '') {
 
+            let authenticationRequest = {
+                username: username,
+                password: senha,
+            }
+    
+            axios.post("http://localhost:8082/login", authenticationRequest)
+            .then((response) => {
 
-const { state } = useLocation();
-   useEffect(() => {
-	
-	if (state != null && state.id != null) {
-	axios.get( "http://localhost:8082/login" + state.id)
-    .then((response) => {
-	setIdLogin(response.data.id)
-    setEmail(response.data.email)
-	setSenha(response.data.senha)
+                registerSuccessfulLoginForJwt(response.data.token, response.data.expiration)
+                navigate("/perfil");
+                
+            })
+            .catch((error) => {
 
-
-		})
-	}
-   }, [state])
-
-
-	function salvar () {
-
-		let loginRequest = {
-
-            email:email,
-			senha:senha,
-		}
-
-		if (idLogin != null) { //Alteração:
-			axios.put( "http://localhost:8082/login" + idLogin, loginRequest)
-			.then((response) => { console.log('login alterado com sucesso.') })
-			.catch((error) => { console.log('Erro ao alterar o login.') })
-		} else { //login:
-			axios.post( "http://localhost:8082/login", loginRequest)
-			.then((response) => { console.log('cadastrado com sucesso.') })
-			.catch((error) => { console.log('Erro ao incluir o login.') })
-		}
- 
-	}
+                notifyError('Usuário não encontrado')
+            })
+        }
+    }
 
 	
         return(
 
             <div className="cad-cliente">
-         {/*<div className='crab-img'>
-    <img src = {crab} alt = "" />
-     </div>*/} 
+                <ToastContainer/>
             <div class="form-cadastro" id="formcadastro">
          
-                <form action="#">
+                <Form>
                 <p id="cad">LOGIN</p>
           
                         <div class="input-cadastro" id="emailcad">
                             <label for="email" id="emailab">E-mail</label>
                             <input type="email" id="email" placeholder="Digite o seu email" 
-                            value={email}
-                            onChange={e => setEmail(e.target.value)}
+                             value={username}
+                             onChange={e => setUsername(e.target.value)}
                             required/>
                         </div>
         
@@ -85,12 +72,13 @@ const { state } = useLocation();
                     </div>
                     
                     <div class="input-cadastro" id="segbutcad">
-                    <Link to={"/perfil"}>
-                    <button id='segbotao'>Entrar</button>
-                    </Link>
+               
+                    <button id='segbotao'  onClick={() => entrar()}>
+                    Entrar</button>
+                  
                 </div>
     
-                </form>
+                </Form>
             </div>
             </div>
         

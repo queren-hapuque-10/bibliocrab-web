@@ -4,9 +4,9 @@
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-height: 130vh;
+    min-height: 110vh;
+    height: auto;
     margin-top: -10%;
-    flex-wrap: wrap;
 }
 
 .btn-filter{
@@ -23,11 +23,12 @@
 }
 
 .form-filtros{
-    background-color: #e8e4ff;
+    background: linear-gradient( #d5dbf995 , #c5d1f9de), url("../..//images/CANVASBIBLIOCRAB\ \(2\).jpg") center/cover no-repeat;
     padding: 50px;
     border-radius: 20px;
     margin-left: 70px;
     margin-right: 70px;
+    margin-bottom: 40px;
 }
 
 .form-filtros input{
@@ -48,6 +49,10 @@
     gap: 16px;
     display: flex;
     flex-wrap: wrap;
+    max-width: 1450px;
+    align-items: center;
+    justify-content: center;
+    
 }
 
 .card{
@@ -60,15 +65,18 @@
     border-radius: 8px;
     box-shadow: rgba(100, 100, 111, 0.316) 0px 7px 29px 0px;
     padding: 0;
-    
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border: 1px solid #1f2f6a30;
  }
 
  @media(max-width: 900px){
     .card{
-        margin-left: 50px;
+        margin-left: -10px;
+        margin-top: 0;
     }
     .form-filtros{
-        margin-left: 45px;
+        margin-left: 50px;
     }
     .input-tit{
         margin-left: 0;
@@ -145,7 +153,7 @@
     width: 900px;
     height: 550px;
     border-radius: 8px;
-    background-color: #fbfdff;
+    background: linear-gradient( #fefeff85 , #fefeffbb), url("../..//images/CANVASBIBLIOCRAB\ \(1\).jpg") center/cover no-repeat;
     border: 4px solid #423cfe;
     box-shadow: rgba(100, 100, 111, 0.316) 0px 7px 29px 0px;
     padding: 0;

@@ -119,16 +119,16 @@
 #input_group_news input {
     all: unset;
     padding: 6px 20px;
-    background-color: #02850272;
+    background-color: #ffffff6b;
     border-radius: 4px 0px 0px 4px;
     border: 1px solid;
 }
 
 #input_group_news #email::placeholder{
     float: left;
-    color: #e7e7e7;
+    color: #090d45;
     font-size: 15px;
-    font-weight: 300;
+    font-weight: 600;
 }
 
 #subscribe-news p{
@@ -313,6 +313,8 @@ transition: 0.4s;
 .card-item-blog img {
     border-radius: 5px;
     transition: 0.3s;
+    width: 100%;
+    height: 25%;
 }
 
 .blog .card-item-blog:hover{

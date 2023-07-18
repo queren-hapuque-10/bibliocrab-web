@@ -22,6 +22,8 @@ import Livros from './pages/CadLivros/Livros';
 import LoginClient from './pages/FormCliente/LoginClient';
 import AdmLog from './pages/FormAdm/AdmLog';
 import ListLivros from './pages/CadLivros/ListLivros';
+import ListLivroCliente from './pages/ListLivroCliente/ListLivroCliente';
+import {ProtectedRoute} from '../src/components/util/ProtectedRoute';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -36,13 +38,14 @@ root.render(
           <Route path = "/cadcliente" element = {<Form/>}/>
           <Route path = "/cadadm" element = {<Adm/>}/>
           <Route path = "/login" element = {<LoginClient/>}/>
-          <Route path = '/perfil' element = {<Perfil/>}/>
-          <Route path = '/form-cronograma' element = {<FormCronograma/>}/>
-          <Route path = '/list-cronograma' element = {<ListCronograma/>}/>
+          <Route path = '/perfil' element = {<ProtectedRoute><Perfil/></ProtectedRoute>}/>
+          <Route path = '/form-cronograma' element = {<ProtectedRoute><FormCronograma/></ProtectedRoute>}/>
+          <Route path = '/list-cronograma' element = {<ProtectedRoute><ListCronograma/></ProtectedRoute>}/>
           <Route path = "/loginadm" element = {<AdmLog/>}/>
           <Route path = "/assinatura" element = {<FormAssinatura/>}/>
           <Route path = "/cadlivros" element = {<Livros/>}/>
-          <Route path='/livros' element = {<ListLivros/>}/>
+          <Route path='/livroslist' element = {<ListLivros/>}/>
+          <Route path='/livros' element = {<ProtectedRoute><ListLivroCliente/></ProtectedRoute>}/>
       </Routes>
     </BrowserRouter>
   </AppProvider>
